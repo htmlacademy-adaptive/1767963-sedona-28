@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+  </head>
+  <body class="page__body">
+    <header class="main-header">
+      <a class="main-header__logo" href="index.html">
+        <img class="main-header__logo-image" src="img/logo.svg" width="185" height="96" alt="Логотип «City of Sedona».">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <ul class="main-nav__list"><!-- нужен враппер? -->
+          <li class="mine-list__item">
+            <a href="index.html">
+              Главная
+            </a>
+          </li>
+          <li class="mine-list__item">
+            <a href="catalog.html">
+              Фото и видео
+            </a>
+          </li>
+          <li class="mine-list__item mine-list__item--active">
+            <a href="form.html">
+              Форма Отзыва
+            </a>
+          </li>
+          <li class="mine-list__item" >
+            <a href="https://htmlacademy.ru/">
+              HTML ACADEMY
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main-container">
+      <h1 class="visually-hidden">Обратная связь</h1>
+      <section class="inner__hero">Sedona<!-- картинка хироблок -->
+        <!-- тут ведь хиро-блок отдельный? -->
+      </section>
+      <div class="form-wrapper">
+        <h2 class="form-title">Оставьте свой отзыв</h2>
+        <p class="form-slogan">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+        <form class="form" action="https://echo.htmlacademy.ru/" method="post">
+
+          <h3 class="form-title">Представьтесь:</h3><!-- нужна ли тут обертка? -->
+         <p class="form-name">
+           <label for="form-name">
+             Имя*:
+           </label>
+           <input type="text" id="form-name" name="form-name" placeholder="Пётр">
+         </p>
+         <p class="form-surname">
+           <label for="form-surname">
+            Фамилия*:
+           </label>
+           <input type="text" id="form-surname" name="form-surname" placeholder="Пустота">
+         </p>
+         <p class="form-patronymic">
+           <label for="form-patronymic">
+             Фамилия*:
+           </label>
+           <input type="text" id="form-patronymic" name="form-patronymic" placeholder="Викторович">
+         </p>
+
+         <h3 class="form-title">Контактная информация:</h3><!-- нужна ли тут обертка? -->
+         <p class="form-phone">
+           <label for="form-phone">
+            Контактный телефон*:
+           </label>
+           <input type="text" id="form-phone" name="form-phone" placeholder="Введите телефон">
+         </p>
+         <p class="form-email">
+          <label for="form-email">
+            Электронная почта*:
+          </label>
+          <input type="email" id="form-email" name="form-email" placeholder="Введите e-mail">
+        </p>
+
+        <fieldset class="form-filter__group">
+          <legend class="form-filter__title">Ваше Общее впечатление:</legend>
+          <ul class="form-filter__list">
+            <li class="form-filter__item">
+              <label class="form__control">
+                <input class="visually-hidden form-control__input" type="radio" name="memory-group" value="positive" checked><!-- как подобрать значение name? -->
+                <span class="form-control__mark"></span>
+                <span class="form-control__label">Скорее положительное</span>
+              </label>
+            </li>
+            <li class="form-filter__item">
+              <label class="form__control">
+                <input class="visually-hidden form-control__input" type="radio" name="memory-group" value="negative">
+                <span class="form-control__mark"></span>
+                <span class="form-control__label">Скорее отрицательное</span>
+              </label>
+            </li>
+            <li class="form-filter__item">
+              <label class="form__control">
+                <input class="visually-hidden form-control__input" type="radio" name="memory-group" value="neitral">
+                <span class="form-control__mark"></span>
+                <span class="form-control__label">Затрудняюсь ответить</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="form-filter__group">
+          <legend class="form-filter__title">Посещенные достопримечательности:</legend>
+          <ul class="form-filter__list">
+            <li class="form-filter__item">
+              <label class="form__control">
+                <input class="visually-hidden form-control__input" type="checkbox" value="Diablo_bridge" checked>
+                <span class="form-control__mark"></span>
+                <span class="form-control__label">Мост Дьявола</span>
+              </label>
+            </li>
+            <li class="form-filter__item">
+              <label class="form__control">
+                <input class="visually-hidden form-control__input" type="checkbox" value="Ball_mountain" checked>
+                <span class="form-control__mark"></span>
+                <span class="form-control__label">Гора-Колокол</span>
+              </label>
+            </li>
+            <li class="form-filter__item">
+              <label class="form__control">
+                <input class="visually-hidden form-control__input" type="checkbox" value="Slide_park" checked>
+                <span class="form-control__mark"></span>
+                <span class="form-control__label">Слайд-парк</span>
+              </label>
+            </li>
+            <li class="form-filter__item">
+              <label class="form__control">
+                <input class="visually-hidden form-control__input" type="checkbox" value="Rad_rocks">
+                <span class="form-control__mark"></span>
+                <span class="form-control__label">Красные скалы</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <p class="form-comment"><!-- нужна ли тут обертка? -->
+          <label for="form-comment">
+           Опишите свои эмоции:
+          </label>
+          <input type="text" id="form-comment" name="form-comment" placeholder="Опишите подробно все свои восторги">
+        </p>
+
+        <button class="button form-button" type="submit">Отправить отзыв</button>
+        <small class="form__legend form__legend--bottom">
+          * — Обязательные поля
+        </small>
+        </form>
+     </div>
+    </main>
+
+    <footer class="main-footer"><!-- надо ли давать другие классы если футер одинаковый? или сразу класс не mine-footer  а просто footer ? -->
+      <div class="main-footer__wrapper">
+        <div class="main-footer__contacts contacts">
+          <b class="contacts__title">Хештег</b><!-- почему b ? -->
+          <a class="contacts__link" href="#">#visitsedona</a>
+        </div>
+        <div class="main-footer__social social">
+          <b class="social__title">Социальные сети</b>
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">Мы в Телеграме</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">Мы в Ютубе</a>
+            </li>
+          </ul>
+        </div>
+        <div class="main-footer__copyright copyright">
+          <b class="copyright__text">Разработано</b>
+         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        </div>
+        </div>
+      </div>
+    </footer>
+
+  </body>
