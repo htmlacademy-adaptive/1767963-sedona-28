@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона Каталог</title>
+  </head>
+  <body class="page__body">
+    <header class="main-header">
+      <a class="main-header__logo" href="index.html">
+        <img class="main-header__logo-image" src="img/logo.svg" width="185" height="96" alt="Логотип «City of Sedona».">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item site-list__item--active">
+            <a href="index.html">
+              Главная
+            </a>
+          </li>
+          <li class="site-list__item">
+            <a href="catalog.html">
+              Фото и видео
+            </a>
+          </li>
+        </ul>
+        <ul class="main-nav__list user-list">
+          <li class="user-list__item">
+            <a href="form.html">
+              Форма Отзыва
+            </a>
+          </li>
+          <li class="user-list__item" >
+            <a href="https://htmlacademy.ru/">
+              HTML ACADEMY
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main-container">
+      <h1 class="visually-hidden">Галерея фотографий пользователей.</h1>
+      <section class="inner-hero">
+        <h2 class="visually-hidden">Sedona</h2><!-- картинка хироблок -->
+        <img class="inner__hero-image" src="img/inner-hero-mobile.jpg" width="320" height="214" alt="Горы Седоны">
+      </section>
+
+      <section class="gallery-wrapper">
+        <h2 class="gallery-title">Фото и фидео</h2>
+        <p class="gallery-slogan">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+
+        <figure class="gallery-item">
+          <img class="gallery-image" src="img/boris-mobile.jpg" width="280" height="280" alt="Дорога Седоны на закате">
+          <figcaption class="gallery-capition">
+            <p class="gallery-description">Неродные просторы</p>
+            <cite>Автор фото:</cite> Борис
+            <span class="gallery-counter">1350</span>
+          </figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img class="gallery-image" src="img/sergay-mobile.jpg" width="280" height="280" alt="Цветущий кактус на фоне гор">
+          <figcaption class="gallery-capition">
+            <p class="gallery-description">Местная растительность</p>
+            <cite>Автор фото:</cite> Сергей
+            <span class="gallery-counter">143</span>
+          </figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img class="gallery-image" src="img/petr-mobile.jpg" width="280" height="280" alt="Серпантин в горах Седоны">
+          <figcaption class="gallery-capition">
+            <p class="gallery-description">Дорога на север</p>
+            <cite>Автор фото:</cite> Петр
+            <span class="gallery-counter">96</span>
+          </figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img class="gallery-image" src="img/anton-mobile.jpg" width="280" height="280" alt="каменный мост на фоне каньона">
+          <figcaption class="gallery-capition">
+            <p class="gallery-description">Мост Дьявола</p>
+            <cite>Автор фото:</cite> Антон
+            <span class="gallery-counter">254</span>
+          </figcaption>
+        </figure>
+
+      </section>
+      <section class="video-wrapper">
+        <h2 class="video-title">Все еще сомневаетесь?</h2>
+        <p class="video-slogan">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+        <img class="video-image" src="img/video-mobile.jpg" width="280" height="177" alt="Автомобильное движение в горах">
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <div class="footer__wrapper">
+        <div class="footer__contacts contacts">
+          <h2 class="contacts__title">Хештег</h2><!-- почему b ? -->
+          <a class="contacts__link" href="#">#visitsedona</a>
+        </div>
+        <div class="footer__social social">
+          <h2 class="social__title">Социальные сети</h2>
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">Мы в Телеграме</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">Мы в Ютубе</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__copyright copyright">
+          <h2 class="copyright__text">Разработано</h2>
+         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        </div>
+        </div>
+      </div>
+    </footer>
+  </body>
