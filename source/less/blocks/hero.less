@@ -1,9 +1,13 @@
-.hero {position: relative;
+.hero {
+  .flex;
+  position: relative;
   background-color: #615048;
-  background-image: url("../img/main-hero-mobile.jpg");
+  background-image: url("../img/main-hero-full.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 320px 389px;
+  height: 389px;
+  align-items: center;
+  justify-content: space-between;
    &::after {
      position: absolute;
      display: block;
@@ -11,8 +15,8 @@
      content: "";
      background-color: transparent;
      background-image: url("../img/divider.svg");
-     background-size: 320px 57px;
-     width: 320px;
+     background-size: 1200px 57px;
+     width: 1200px;
      height: 57px;
     }// абсолют и релейтив пишутся тут же или отдельно? и когда можно трогать флексы?
 }
