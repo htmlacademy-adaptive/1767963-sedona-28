@@ -4,32 +4,46 @@
   margin: 0;
   list-style-type: none;
   background-color: #ffffff;
+  padding-top: 23px;
 }
 
 .advantages-entry__title {
   .slogan;
+  align-self: start;
+  padding-left: 65px;
+  margin: 0;
 }
 .advantages-entry__description {
   color: rgb(51, 51, 51);
+  text-transform: uppercase;
+  text-align: left;
+  padding-left: 67px;
 }
 .advantages-entry__item--housing {
   display: block;
-    background-image: url("../img/house.svg");
-    background-repeat: no-repeat;
-    background-color: transparent;
-    background-size: 39px 36px;
+  background-image: url("../img/house.svg");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-size: 39px 36px;
 }
 .advantages-entry__item--food {
   display: block;
-    background-image: url("../img/burger.svg");
-    background-repeat: no-repeat;
-    background-color: transparent;
-    background-size: 40px 34px;
+  background-image: url("../img/burger.svg");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-size: 40px 34px;
 }
 .advantages-entry__item--gifts {
   display: block;
-    background-image: url("../img/gift.svg");
-    background-repeat: no-repeat;
-    background-color: transparent;
-    background-size: 32px 38px;
+  background-image: url("../img/gift.svg");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-size: 32px 38px;
+}
+.advantages-entry__item {
+  .flex;
+  padding-bottom: 25px;
+  &:last-child {
+    padding-bottom: 46px;
+  }
 }
