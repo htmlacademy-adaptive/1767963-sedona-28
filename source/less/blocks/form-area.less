@@ -1,31 +1,143 @@
 .form-wrapper_area {
   .flex;
 }
+
 .form-name {
   .flex;
   align-items: start;
 }
+
 .form-surname {
   .flex;
   align-items: start;
 }
+
 .form-patronymic {
   .flex;
   align-items: start;
 }
+
 .form-label {
   display: block;
 }
+
 .form-phone {
   .flex;
   align-items: start;
 }
+
 .form-email {
   .flex;
   align-items: start;
 }
+
+.form__item {
+  display: flex;
+  padding-top: 32px;
+}
+
 .form__label {
+  align-items: center;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
+  padding-left: 62px;
+  padding-bottom: 18px;
+  padding-top: 18px;
+}
+
+.form__control {
+  position: relative;
+  display: block;
+  padding-left: 20px;
+  &:hover .control-mark {
+    border-color: #e5e5e5;
+  }
+  &:focus .control-mark {
+    background-color: #f2f2f2;
+    outline: 2px solid #e5e5e5;
+  }
+  &:active .control-mark {
+    border-color: #d5d5d5;
+  }//на какой блок весить состояния? я запуталась
+}
+
+.form__mark {
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+  top: -8px;
+  left: 0;
+}
+
+.form__input[type="checkbox"]:checked + .form__mark::before,
+.form__input[type="checkbox"]:checked + .form__mark::after {
+  content: "";
+  position: absolute;
+  background-color: #333333;
+}
+
+.form__input[type="checkbox"]:checked + .form__mark::before {
+  transform: rotate(45deg);
+  top: 26px;
+  left: 12px;
+  width: 11px;
+  height: 4px;
+}
+
+.form__input[type="checkbox"]:checked + .form__mark::after {
+  transform: rotate(-45deg);
+  top: 22px;
+  left: 16px;
+  width: 22px;
+  height: 4px;
+}
+.form__input[type="radio"] + .form__mark {
+  border-radius: 50%;
+}
+.form__input[type="radio"]:checked + .form__mark::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 16px;
+  height: 16px;
+  background-color: #333333;
+  border-radius: 50%;
+}
+.form-phone {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/phone.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: #e6e6e6;
+    background-size: 20px 20px;
+    height: 58px;
+    width: 58px;
+    right: 0;
+    top: 21px;
+    z-index: 1;
+  }
+}
+.form-email {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/mail.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: #e6e6e6;
+    background-size: 20px 20px;
+    height: 58px;
+    width: 58px;
+    right: 0;
+    top: 21px;
+    z-index: 1;
+  }
 }

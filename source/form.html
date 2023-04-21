@@ -56,19 +56,19 @@
             <label class="form-label" for="form-name">
              Имя*:
             </label>
-            <input class="form-field" type="text" id="form-name" name="form-name" placeholder="Пётр">
+            <input class="form-field" type="text" id="form-name" name="form-name" placeholder="Фамилия">
            </p>
            <p class="form-surname">
            <label class="form-label" for="form-surname">
             Фамилия*:
            </label>
-           <input class="form-field" type="text" id="form-surname" name="form-surname" placeholder="Пустота">
+           <input class="form-field" type="text" id="form-surname" name="form-surname" placeholder="Имя">
            </p>
            <p class="form-patronymic">
            <label class="form-label" for="form-patronymic">
              Отчество*:
            </label>
-           <input class="form-field" type="text" id="form-patronymic" name="form-patronymic" placeholder="Викторович">
+           <input class="form-field" type="text" id="form-patronymic" name="form-patronymic" placeholder="Отчество">
            </p>
           </div>
 
@@ -78,36 +78,36 @@
               <label class="form-label" for="form-phone">
                Контактный телефон*:
               </label>
-              <input class="form-field" type="text" id="form-phone" name="form-phone" placeholder="Введите телефон">
+              <input class="form-field form-field__phone" type="text" id="form-phone" name="form-phone" placeholder="Введите телефон">
             </p>
             <p class="form-email">
              <label class="form-label" for="form-email">
                Электронная почта*:
              </label>
-             <input class="form-field" type="email" id="form-email" name="form-email" placeholder="Введите e-mail">
+             <input class="form-field form-field__email" type="email" id="form-email" name="form-email" placeholder="Введите e-mail">
            </p>
          </div>
 
         <fieldset class="form__group">
           <legend class="form__title">Ваше Общее впечатление:</legend>
-          <ul class="form__list">
+          <ul class="form__list form-area__radio">
             <li class="form__item">
               <label class="form__control">
-                <input class="form__input" type="radio" name="memory-group" value="positive" checked><!-- visually-hidden --><!-- как подобрать значение name? -->
+                <input class="form__input visually-hidden" type="radio" name="memory-group" value="positive" checked><!-- visually-hidden --><!-- как подобрать значение name? -->
                 <span class="form__mark"></span>
                 <span class="form__label">Скорее положительное</span>
               </label>
             </li>
             <li class="form__item">
               <label class="form__control">
-                <input class="form__input" type="radio" name="memory-group" value="negative"><!-- visually-hidden -->
+                <input class="form__input visually-hidden" type="radio" name="memory-group" value="negative"><!-- visually-hidden -->
                 <span class="form__mark"></span>
                 <span class="form__label">Скорее отрицательное</span>
               </label>
             </li>
             <li class="form__item">
               <label class="form__control">
-                <input class="form__input" type="radio" name="memory-group" value="neitral"><!-- visually-hidden -->
+                <input class="form__input visually-hidden" type="radio" name="memory-group" value="neitral"><!-- visually-hidden -->
                 <span class="form__mark"></span>
                 <span class="form__label">Затрудняюсь ответить</span>
               </label>
@@ -117,30 +117,31 @@
 
         <fieldset class="form__group">
           <legend class="form__title">Посещенные достопримечательности:</legend>
-          <ul class="form__list">
+          <ul class="form__list  form-area__checkbox">
             <li class="form__item">
               <label class="form__control">
-                <input class="form__input" type="checkbox" value="Мост Дьявол" checked><!-- visually-hidden -->
+                <input class="form__input visually-hidden" type="checkbox" value="Мост Дьявол" checked><!-- visually-hidden -->
+                <span class="form__mark"></span>
                 <span class="form__label">Мост Дьявола</span>
               </label>
             </li>
             <li class="form__item">
               <label class="form__control">
-                <input class="form__input" type="checkbox" value="Гора-Колокол" checked><!-- visually-hidden -->
+                <input class="form__input visually-hidden" type="checkbox" value="Гора-Колокол" checked><!-- visually-hidden -->
                 <span class="form__mark"></span>
                 <span class="form__label">Гора-Колокол</span>
               </label>
             </li>
             <li class="form__item">
               <label class="form__control">
-                <input class="form__input" type="checkbox" value="Слайд-парк" checked><!-- visually-hidden -->
+                <input class="form__input visually-hidden" type="checkbox" value="Слайд-парк" checked><!-- visually-hidden -->
                 <span class="form__mark"></span>
                 <span class="form__label">Слайд-парк</span>
               </label>
             </li>
             <li class="form__item">
               <label class="form__control">
-                <input class="form__input" type="checkbox" value="Красные скалы"><!-- visually-hidden -->
+                <input class="form__input visually-hidden" type="checkbox" value="Красные скалы"><!-- visually-hidden -->
                 <span class="form__mark"></span>
                 <span class="form__label">Красные скалы</span>
               </label>
