@@ -1,0 +1,71 @@
+.gallery-wrapper {
+  .flex;
+}
+
+.gallery-item {
+  .flex;
+  align-items: start;
+}
+
+.gallery-title {
+  .slogan;
+}
+
+.gallery-description {
+  display: block;
+  margin: 0;
+  padding-top: 16px;
+  text-transform: uppercase;
+}
+
+.gallery-capition {
+  .flex;
+  align-items: start;
+}
+
+.gallery-copyright {
+  font-style: normal;
+  display: block;
+  margin-right: auto;
+}
+
+.gallery-counter {
+  display: block;
+  font-weight: 700;
+  background-image: url("../img/like-icon.svg");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: left bottom;
+  padding-left: 37px;
+  padding-top: 16px;
+}//как делать стрелочку запуска видело?
+.gallery-slogan {
+  display: block;
+  text-transform: uppercase;
+  width: 280px;
+}
+
+.video-title {
+  .slogan;
+}
+
+.video-slogan {
+  text-transform: uppercase;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 280px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/move.svg");
+    background-size: 54px 48px;
+    height: 54px;
+    width: 48px;
+    bottom: 64px;
+    left: 116px;
+    z-index: 1;
+  }
+}

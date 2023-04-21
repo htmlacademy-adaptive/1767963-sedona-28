@@ -1,0 +1,26 @@
+.inner-hero {
+  .flex;
+  position: relative;
+  background-color: #615048;
+  background-image: url("../img/main-hero-full.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  height: 214px;
+  width: 320px;
+  align-items: center;
+  justify-content: space-between;
+
+  &::after {
+    position: absolute;
+    display: block;
+    z-index: 1;
+    content: "";
+    background-color: transparent;
+    background-image: url("../img/divider.svg");
+    background-size: 1200px 57px;
+    background-repeat: no-repeat;
+    width: 1200px;
+    height: 57px;
+    margin-top: 157px;
+  }// абсолют и релейтив пишутся тут же или отдельно? и когда можно трогать флексы?
+}
