@@ -6,15 +6,19 @@
   .flex;
   align-items: center;
 }
+
 .advantages__item {
   .flex;
   background-color: #eeeeee;
+
   &:first-child {
     position: relative;
+
     &::before {
       content: "";
       position: absolute;
       display: block;
+      margin: 0 auto;
       z-index: 1;
       background-color: transparent;
       background-image: url("../img/divider-bottom.svg");
@@ -22,18 +26,20 @@
       margin-bottom: 190px;
       width: 768px;
       height: 37px;
-      margin: 0 auto;
-      }
+    }
   }
 }
+
 .advantages__title {
   .slogan;
   display: block;
   margin: 0;
+
   &:first-of-type {
     padding-top: 54px;
   }
 }
+
 .advantages__description {
   color: rgb(51, 51, 51);
   display: block;
@@ -41,13 +47,16 @@
   text-transform: uppercase;
   margin-bottom: 40px;
 }
+
 .advantages__item--wrapper {
   background-color: #81b3d2;
   color: #ffffff;
+
   .advantages__description {
     color: #ffffff;
   }
 }
+
 .advantages-image {
   display: block;
   margin: 0;

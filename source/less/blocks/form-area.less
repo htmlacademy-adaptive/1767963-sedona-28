@@ -24,11 +24,43 @@
 .form-phone {
   .flex;
   align-items: start;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/phone.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: #e6e6e6;
+    background-size: 20px 20px;
+    height: 58px;
+    width: 58px;
+    right: 0;
+    top: 21px;
+    z-index: 1;
+  }
 }
 
 .form-email {
   .flex;
   align-items: start;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/mail.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: #e6e6e6;
+    background-size: 20px 20px;
+    height: 58px;
+    width: 58px;
+    right: 0;
+    top: 21px;
+    z-index: 1;
+  }
 }
 
 .form__item {
@@ -50,13 +82,16 @@
   position: relative;
   display: block;
   padding-left: 20px;
+
   &:hover .control-mark {
     border-color: #e5e5e5;
   }
+
   &:focus .control-mark {
     background-color: #f2f2f2;
     outline: 2px solid #e5e5e5;
   }
+
   &:active .control-mark {
     border-color: #d5d5d5;
   }//на какой блок весить состояния? я запуталась
@@ -94,9 +129,11 @@
   width: 22px;
   height: 4px;
 }
+
 .form__input[type="radio"] + .form__mark {
   border-radius: 50%;
 }
+
 .form__input[type="radio"]:checked + .form__mark::before {
   content: "";
   position: absolute;
@@ -106,38 +143,4 @@
   height: 16px;
   background-color: #333333;
   border-radius: 50%;
-}
-.form-phone {
-  position: relative;
-  &::before {
-    content: "";
-    position: absolute;
-    background-image: url("../img/phone.svg");
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-color: #e6e6e6;
-    background-size: 20px 20px;
-    height: 58px;
-    width: 58px;
-    right: 0;
-    top: 21px;
-    z-index: 1;
-  }
-}
-.form-email {
-  position: relative;
-  &::before {
-    content: "";
-    position: absolute;
-    background-image: url("../img/mail.svg");
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-color: #e6e6e6;
-    background-size: 20px 20px;
-    height: 58px;
-    width: 58px;
-    right: 0;
-    top: 21px;
-    z-index: 1;
-  }
 }
