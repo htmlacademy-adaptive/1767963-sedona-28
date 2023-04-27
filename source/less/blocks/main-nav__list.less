@@ -1,20 +1,14 @@
-.main-header {
-  @media (min-width: @tablet-width) {
-    display: flex;
-    justify-content: space-between;
-    width: 768px;
-    margin: 0 auto;
-  }
-}
-
 .main-nav__list {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
+  .flex(wrap, center, column, spase-between);
+
+  @media (min-width: @tablet-width) {
+    .flex (@flex-direction: row);
+    margin: 0 auto;
+    min-width: 306px;
+  }
 }
 
 .main-nav__toggle {

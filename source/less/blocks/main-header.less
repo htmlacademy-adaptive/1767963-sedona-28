@@ -1,8 +1,14 @@
 .main-header {
-  .flex;
+  .flex(wrap, center, column, spase-between);
   font-size: 18px;
   line-height: 26px;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    .flex (@flex-direction: row);
+    width: 768px;
+    margin: 0 auto;
+  }
 }
 
 .main-header__logo {
