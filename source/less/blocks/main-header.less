@@ -1,11 +1,19 @@
 .main-header {
-  .flex(wrap, center, column, spase-between);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
   font-size: 18px;
   line-height: 26px;
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
-    .flex (@flex-direction: row);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
     width: 768px;
     margin: 0 auto;
   }

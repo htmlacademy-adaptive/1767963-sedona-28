@@ -1,5 +1,9 @@
 .hero {
-  .flex;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative;
   background-color: #615048;
   background-image: url("../img/main-hero-full.jpg");
@@ -8,8 +12,6 @@
   background-size: 901px 389px;
   height: 389px;
   width: 100%;
-  align-items: center;
-  justify-content: space-between;
 
   &::after {
     position: absolute;
