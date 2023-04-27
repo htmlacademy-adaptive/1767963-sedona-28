@@ -1,5 +1,20 @@
 .main-header {
+  .flex;
   font-size: 18px;
   line-height: 26px;
   text-transform: uppercase;
 }
+
+.main-header__logo {
+  height: 96px;
+  z-index: 1;
+
+  @media (min-width: @tablet-width) {
+    order: 2;
+  }
+
+  @media (min-width: @desktop-width) {
+    order: 2;
+  }
+}
+

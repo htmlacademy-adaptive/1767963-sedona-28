@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона Форма</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -91,21 +92,21 @@
           <ul class="form__list form-area__radio">
             <li class="form__item">
               <label class="form__control">
-                <input class="form__input visually-hidden" type="radio" name="memory-group" value="positive" checked><!-- visually-hidden --><!-- как подобрать значение name? -->
+                <input class="form__input visually-hidden" type="radio" name="memory-group" value="Положительное" checked>
                 <span class="form__mark"></span>
                 <span class="form__label">Скорее положительное</span>
               </label>
             </li>
             <li class="form__item">
               <label class="form__control">
-                <input class="form__input visually-hidden" type="radio" name="memory-group" value="negative"><!-- visually-hidden -->
+                <input class="form__input visually-hidden" type="radio" name="memory-group" value="Отрицательное">
                 <span class="form__mark"></span>
                 <span class="form__label">Скорее отрицательное</span>
               </label>
             </li>
             <li class="form__item">
               <label class="form__control">
-                <input class="form__input visually-hidden" type="radio" name="memory-group" value="neitral"><!-- visually-hidden -->
+                <input class="form__input visually-hidden" type="radio" name="memory-group" value="Нейтральное">
                 <span class="form__mark"></span>
                 <span class="form__label">Затрудняюсь ответить</span>
               </label>
@@ -117,39 +118,40 @@
           <ul class="form__list  form-area__checkbox">
             <li class="form__item">
               <label class="form__control">
-                <input class="form__input visually-hidden" type="checkbox" value="Мост Дьявол" checked><!-- visually-hidden -->
+                <input class="form__input visually-hidden" type="checkbox" value="Мост Дьявол" checked>
                 <span class="form__mark"></span>
                 <span class="form__label">Мост Дьявола</span>
               </label>
             </li>
             <li class="form__item">
               <label class="form__control">
-                <input class="form__input visually-hidden" type="checkbox" value="Гора-Колокол" checked><!-- visually-hidden -->
+                <input class="form__input visually-hidden" type="checkbox" value="Гора-Колокол" checked>
                 <span class="form__mark"></span>
                 <span class="form__label">Гора-Колокол</span>
               </label>
             </li>
             <li class="form__item">
               <label class="form__control">
-                <input class="form__input visually-hidden" type="checkbox" value="Слайд-парк" checked><!-- visually-hidden -->
+                <input class="form__input visually-hidden" type="checkbox" value="Слайд-парк" checked>
                 <span class="form__mark"></span>
                 <span class="form__label">Слайд-парк</span>
               </label>
             </li>
             <li class="form__item">
               <label class="form__control">
-                <input class="form__input visually-hidden" type="checkbox" value="Красные скалы"><!-- visually-hidden -->
+                <input class="form__input visually-hidden" type="checkbox" value="Красные скалы">
                 <span class="form__mark"></span>
                 <span class="form__label">Красные скалы</span>
               </label>
             </li>
           </ul>
         </fieldset>
-        <fieldset class="form-comment"><!-- нужна ли тут обертка? -->
+        <fieldset class="form-comment">
           <label class="form__title" for="form-comment">
             Опишите свои эмоции:
           </label>
-          <input class="form-field form-field_comment" type="textarea" id="form-comment" name="form-comment" placeholder="Опишите подробно все свои восторги">
+          <textarea class="form-field form-field_comment" type="textarea" id="form-comment" name="form-comment" placeholder="Опишите подробно все свои восторги">
+          </textarea>
         </fieldset>
         <button class="button form-button" type="submit">Отправить отзыв</button>
         <small class="form__legend form__legend--bottom">

@@ -16,11 +16,13 @@
   font-weight: 700;
   text-transform: uppercase;
 }
-.flex() {
+
+.flex(@flex-wrap, @align-items, @flex-direction, @justify) {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  flex-direction: column;
+  flex-wrap: @flex-wrap;
+  align-items: @align-items;
+  flex-direction: @flex-direction;
+  justify-content: @justify;
 }
 .title() {
   font-weight: 700;
