@@ -17,11 +17,11 @@
   text-transform: uppercase;
 }
 
-.flex(@flex-wrap, @align, @justify) {
+.flex(@wrap, @align, @direction) {
   display: flex;
-  flex-wrap: @flex-wrap;
+  flex-wrap: @wrap;
   align-items: @align;
-  justify-content: @justify;
+  flex-direction: @direction;
 }
 .title() {
   font-weight: 700;
