@@ -1,8 +1,5 @@
-@media (min-width: @tablet-width) {
-  .site-list {
-    display: flex;
-    width: 306px;
-  }
+.site-list__item {
+  width: 320px;
 }
 
 .site-list__link {
@@ -34,6 +31,40 @@
   }
 }
 
-.site-list__item {
-  width: 320px;
+@media (min-width: @tablet-width) {
+  .site-list {
+    order: 1;
+    display: flex;
+    flex-direction: row;
+    width: 306px;
+  }
+
+  .site-list__item {
+    width: 153px;
+  }
+
+  .site-list__link {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  .site-list__link--active {
+    color: #766357;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-list {
+    order: 1;
+    width: 478px;
+  }
+
+  .site-list__item {
+    width: 239px;
+  }
+
+  .site-list__link {
+    background-color: #ffffff;
+    color: #000000;
+  }
 }

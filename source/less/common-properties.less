@@ -23,3 +23,29 @@
   justify-content: center;
 }
 
+.main-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.main-nav {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 320px;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    width: 768px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    width: 1200px;
+  }
+}
+
