@@ -1,8 +1,5 @@
 .main-header {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  flex-direction: row;
+  .flex (wrap, center, row);
   justify-content: center;
   font-size: 18px;
   line-height: 26px;
@@ -11,10 +8,7 @@
 
 @media (min-width: @tablet-width) {
   .main-header {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    flex-direction: row;
+    .flex (wrap, center, row);
     justify-content: space-between;
     width: 768px;
     margin: 0 auto;
@@ -23,10 +17,7 @@
 
 @media (min-width: @desktop-width) {
   .main-header {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    flex-direction: row;
+    .flex (wrap, center, row);
     justify-content: space-between;
     width: 1200px;
     margin: 0 auto;

@@ -8,27 +8,6 @@
   width: 100%;
   padding-top: 17px;
   padding-bottom: 12px;
-
-  &:first-child {
-    position: relative;
-
-    &::before {
-      content: "";
-      cursor: pointer;
-      position: absolute;
-      display: block;
-      z-index: 1;
-      margin: 0 auto;
-      background-color: transparent;
-      background-image: url("../img/icon-cross.svg");
-      background-size: 23px 23px;
-      margin-bottom: 190px;
-      width: 23px;
-      height: 23px;
-      right: 16px;
-      top: 17px;
-    }
-  }
 }
 
 @media (min-width: @tablet-width) {
@@ -66,5 +45,27 @@
   .site-list__link {
     background-color: #ffffff;
     color: #000000;
+  }
+}
+
+
+.site-list__link--close { //внутри медиавырадения не хочет показывать "только для мобильного"
+  position: relative;
+
+  &::before {
+    content: "";
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    z-index: 2;
+    margin: 0 auto;
+    background-color: transparent;
+    background-image: url("../img/icon-cross.svg");
+    background-size: 23px 23px;
+    margin-bottom: 190px;
+    width: 23px;
+    height: 23px;
+    right: 16px;
+    top: 17px;
   }
 }

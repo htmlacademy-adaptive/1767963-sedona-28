@@ -61,3 +61,29 @@
     padding-bottom: 46px;
   }
 }
+
+@media (min-width: @tablet-width) {
+  .advantages-entry__list {
+    width: 768px;
+    .flex(wrap, center, row);
+  }
+
+  .advantages-entry__item {
+    width: 256px;
+    .flex(wrap, center, column);
+    padding-bottom: 60px;
+    padding-top: 157px;//переместить картинку
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages-entry__list {
+    width: 1200px;
+  }
+
+  .advantages-entry__item {
+    width: 400px;
+    padding-bottom: 69px;
+    padding-top: 169px;
+  }
+}
