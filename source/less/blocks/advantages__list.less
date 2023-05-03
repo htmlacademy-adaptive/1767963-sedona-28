@@ -102,6 +102,12 @@
     height: 256px;
     .flex(wrap, center, column);
   }
+
+  .advantages-bottom__list {
+    width: 768px;
+    .flex(wrap, center, row);
+    justify-content: space-evenly;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -112,5 +118,9 @@
   .advantages__item--wrapper {
     width: 1200px;
     height: 256px;
+  }
+
+  .advantages-bottom__list {
+    width: 1200px;
   }
 }
