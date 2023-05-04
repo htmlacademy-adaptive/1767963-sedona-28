@@ -115,3 +115,24 @@
     padding-bottom: 24px;
   }
 }
+
+@media (min-width: @tablet-width) {
+  .form {
+    display: grid;
+    grid-template-columns: 295px 295px;
+    justify-content: space-between;
+    width: 648px;
+    margin: 0 auto;
+  }
+
+  .form__group {
+    grid-column: 1 / -1;
+  }
+
+  .form-comment {
+    grid-column: 1 / -1;
+    .flex (wrap, center,column);
+    justify-content: center;
+  }
+
+}
