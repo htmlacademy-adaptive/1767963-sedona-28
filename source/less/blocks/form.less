@@ -38,8 +38,14 @@
   }
 }
 
+.form-wrapper {
+  .flex (wrap, center,column);
+}
+
 .form__group {
   border: none;
+  margin: 0;
+  padding: 0;
 }
 
 .form__list {
@@ -55,7 +61,8 @@
 
 .form-comment {
   border: none;
-  padding-bottom: 56px;
+  margin: 0;
+  padding: 0 0 56px;
 }
 
 .form-field_comment {
@@ -80,6 +87,10 @@
   .title;
 }
 
+.form-label {
+  text-transform: uppercase;
+}
+
 .form__legend {
   display: block;
   width: max-content;
@@ -102,6 +113,7 @@
 
 .form-slogan {
   text-transform: uppercase;
+  color: #333333;
 }
 
 .form-area__radio {
@@ -123,10 +135,12 @@
     justify-content: space-between;
     width: 648px;
     margin: 0 auto;
+    padding-bottom: 64px;
   }
 
   .form__group {
     grid-column: 1 / -1;
+    .flex (wrap, center,row);
   }
 
   .form-comment {
@@ -135,4 +149,80 @@
     justify-content: center;
   }
 
+  .form-field {
+    width: 263px;
+  }
+
+  .form-title {
+    font-size: 21px;
+    line-height: 26px;
+    margin: 0;
+    padding-bottom: 28px;
+  }
+
+  .form__title {
+    font-size: 21px;
+    line-height: 26px;
+    margin: 0;
+    padding-bottom: 28px;
+  }
+
+  .form-title__main {
+    font-size: 30px;
+    padding-top: 64px;
+    padding-bottom: 20px;
+  }
+
+  .form-slogan {
+    width: 435px;
+    margin: 0;
+    padding-bottom: 90px;
+  }
+
+  .form-label {
+    padding-left: 16px;//не получается просто сделать отступ между полем и нижней подписью, нужен еще один класс?
+  }
+
+  .form-wrapper_area {
+    padding-bottom: 63px;
+  }
+
+  .form-area__radio {
+    flex-direction: row;
+    width: 576px;
+    margin: 0 auto;
+
+    &:last-child {
+      padding-bottom: 48px;
+    }
+
+    .form__item {
+      width: 280px;
+    }
+  }
+
+  .form-area__checkbox {
+    flex-direction: row;
+    width: 480px;
+    margin: 0 auto;
+
+    &:last-child {
+      padding-bottom: 42px;
+    }
+
+    .form__item {
+      width: 224px;
+    }
+  }
+
+  .form-field_comment {
+    width: 100%;
+    padding: 0 0 48px 0;
+  }
+
+  .form__legend--bottom {
+    font-size: 14px;
+    text-transform: uppercase;
+    align-self: center;
+  }
 }
