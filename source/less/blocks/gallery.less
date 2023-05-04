@@ -1,17 +1,12 @@
 .gallery-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  flex-direction: column;
+  .flex (wrap, center, column);
   justify-content: space-between;
 }
 
 .gallery-item {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: start;
-  flex-direction: column;
+  .flex (wrap, start, column);
   justify-content: space-between;
+  margin: 0;
 }
 
 .gallery-title {
@@ -21,22 +16,27 @@
 .gallery-description {
   display: block;
   margin: 0;
-  padding-top: 16px;
+  padding-top: 15px;
+  padding-bottom: 11px;
   text-transform: uppercase;
+  font-size: 14px;
+  line-height: 21px;
 }
 
 .gallery-capition {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: start;
-  flex-direction: column;
+  .flex (wrap, start, column);
   justify-content: space-between;
+  width: 100%;
 }
 
 .gallery-copyright {
   font-style: normal;
   display: block;
   margin-right: auto;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: none;
 }
 
 .gallery-counter {
@@ -53,6 +53,12 @@
   display: block;
   text-transform: uppercase;
   width: 280px;
+}
+
+.gallery-wrapper__item {
+  .flex (wrap, center, column);
+  width: 100%;
+  margin: 0;
 }
 
 .video-title {
@@ -77,5 +83,74 @@
     bottom: 64px;
     left: 116px;
     z-index: 1;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .gallery-wrapper {
+    margin: 0;
+    padding: 0;
+    width: 768px;
+  }
+
+  .gallery-title {
+    margin: 0;
+    padding-top: 66px;
+    padding-bottom: 26px;
+    font-size: 30px;
+    line-height: 26px;
+  }
+
+  .gallery-slogan {
+    margin: 0;
+    padding-top: 26px;
+    padding-bottom: 66px;
+    width: 458px;
+    font-size: 21px;
+    line-height: 26px;
+  }
+
+  .gallery-wrapper__item {
+    .flex (wrap, center, row);
+    width: 648px;
+  }
+
+  .gallery-item {
+    width: 324px;
+
+    &:first-child {
+      width: 648px;
+    }
+
+    &:nth-child(odd) {
+      background-color: #ebebeb;
+    }
+
+    &:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+  }
+
+  .gallery-description {
+    .flex (wrap, left, column);
+    padding-left: 20px;
+    padding-top: 22px;
+    padding-bottom: 15px;
+  }
+
+  .gallery-capition {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .gallery-counter {
+    padding-right: 20px;
+    padding-top: 28px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .gallery-wrapper {
+    width: 1200px;
   }
 }
