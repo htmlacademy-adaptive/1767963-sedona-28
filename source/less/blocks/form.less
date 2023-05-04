@@ -163,6 +163,7 @@
   .form__title {
     font-size: 21px;
     line-height: 26px;
+    width: 308px;
     margin: 0;
     padding-bottom: 28px;
   }
@@ -225,4 +226,52 @@
     text-transform: uppercase;
     align-self: center;
   }
+}
+
+@media (min-width: @desktop-width) {
+  .form {
+    grid-template-columns: 430px 430px;
+    width: 960px;
+    margin: 0 auto;
+    padding-bottom: 64px;
+  }
+
+  .form-field {
+    width: 398px;
+  }
+
+  .form-area__radio {
+    width: 960px;
+
+    &:last-child {
+      padding-bottom: 56px;
+    }
+  }
+
+  .form-area__checkbox {
+    width: 960px;
+
+    &:last-child {
+      padding-bottom: 56px;
+    }
+
+    .form__item {
+      min-width: 170px;//выровнять отступы 31px?
+    }
+  }
+
+  .form-field_comment {
+    width: 768px;
+    padding: 0 0 48px 0;
+  }
+
+  .form-button {
+    width: 372px;
+    margin-left: 96px;
+  }
+
+  .form__legend--bottom {
+    margin-right: 96px;
+  }
+
 }
