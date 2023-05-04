@@ -70,8 +70,14 @@
 }
 
 .video-wrapper {
+  .flex (wrap, center, column);
+  width: 100%;
+}
+
+.video-image {
   position: relative;
   width: 280px;
+  height: 177px;
 
   &::before {
     content: "";
@@ -82,7 +88,7 @@
     width: 48px;
     bottom: 64px;
     left: 116px;
-    z-index: 1;
+    z-index: 1;//почему его не видно?
   }
 }
 
@@ -147,10 +153,79 @@
     padding-right: 20px;
     padding-top: 28px;
   }
+
+  .video-wrapper {
+    padding-top: 58px;
+  }
+
+  .video-title {
+    font-size: 30px;
+    line-height: 26px;
+    margin: 0;
+  }
+
+  .video-slogan {
+    margin: 0;
+    width: 445px;
+    padding-top: 52px;
+    padding-bottom: 66px;
+  }
+
+  .video-image {
+    width: 648px;
+    height: 500px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .gallery-wrapper {
     width: 1200px;
+  }
+
+  .gallery-wrapper__item {
+    width: 100%;
+  }
+
+  .gallery-item {
+    position: relative;
+    width: 400px;
+    height: 267px;
+
+    &:first-child {
+      width: 100%;
+      height: 400px;
+
+      .gallery-capition {
+        position: absolute;
+        top: 320px;
+      }
+    }
+  }
+
+  .gallery-capition {
+    position: absolute;
+    top: 187px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #ffffff;//как перекрасить иконку? высота юлока юудет соответсвовать после нового размера картинки
+  }
+
+  .video-wrapper {
+    padding-top: 62px;
+    padding-bottom: 84px;
+  }
+
+  .video-title {
+    margin: 0;
+  }
+
+  .video-slogan {
+    margin: 0;
+    width: 445px;
+    padding-bottom: 64px;
+  }
+
+  .video-image {
+    width: 800px;
+    height: 500px;
   }
 }
