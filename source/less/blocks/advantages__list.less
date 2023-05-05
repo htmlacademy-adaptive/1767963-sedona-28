@@ -20,6 +20,7 @@
 
   &:first-child {
     position: relative;
+    overflow: hidden;
 
     &::before {
       content: "";
@@ -30,8 +31,9 @@
       background-color: transparent;
       background-image: url("../img/divider-bottom.svg");
       background-size: 768px 37px;
+      background-position: center;
+      width: 320px;
       margin-bottom: 190px;
-      width: 768px;
       height: 37px;
 
       @media (min-width: @tablet-width) {
