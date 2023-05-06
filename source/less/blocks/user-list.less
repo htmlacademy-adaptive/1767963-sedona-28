@@ -2,6 +2,7 @@
   width: 320px;
 }
 
+
 .user-list__link {
   text-decoration: none;
   background-color: #81b3d2;
@@ -11,6 +12,14 @@
   width: 100%;
   padding-top: 17px;
   padding-bottom: 12px;
+}
+
+@media (max-width: 767px) {
+  .user-list {
+    position: absolute;
+    z-index: 2;
+    top: 110px;
+  }
 }
 
 @media (min-width: @tablet-width) {
