@@ -5,11 +5,21 @@
   background-color: #ffffff;
   color: #000000;
   text-align: center;
-  width: 320px; //временные свойства, а то страшно выглядит))
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  flex-direction: column;
+  width: 320px;
+  .flex (wrap, center,column);
+  justify-content: center;
   margin: 0 auto;
   padding: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .page-body {
+    width: 768px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-body {
+    width: 1200px;
+  }
 }

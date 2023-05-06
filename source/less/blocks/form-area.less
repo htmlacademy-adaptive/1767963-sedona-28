@@ -1,19 +1,38 @@
 .form-wrapper_area {
-  .flex;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (min-width: @tablet-width) {
+  .form-area_contact {
+    justify-content: start;
+  }
 }
 
 .form-name {
-  .flex;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: start;
 }
 
 .form-surname {
-  .flex;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: start;
 }
 
 .form-patronymic {
-  .flex;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: start;
 }
 
@@ -22,7 +41,10 @@
 }
 
 .form-phone {
-  .flex;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: start;
   position: relative;
 
@@ -43,7 +65,10 @@
 }
 
 .form-email {
-  .flex;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: start;
   position: relative;
 
@@ -83,18 +108,18 @@
   display: block;
   padding-left: 20px;
 
-  &:hover .control-mark {
+  &:hover .form__mark {
     border-color: #e5e5e5;
   }
 
-  &:focus .control-mark {
+  &:focus .form__mark {
     background-color: #f2f2f2;
     outline: 2px solid #e5e5e5;
   }
 
-  &:active .control-mark {
+  &:active .form__mark {
     border-color: #d5d5d5;
-  }//на какой блок весить состояния? я запуталась
+  }
 }
 
 .form__mark {

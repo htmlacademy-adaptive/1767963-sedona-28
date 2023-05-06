@@ -18,3 +18,17 @@
   font-weight: 400;
   text-transform: uppercase;
 }
+
+@media (min-width: @tablet-width) {
+  .footer__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 768px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .footer__wrapper {
+    width: 1200px;
+  }
+}

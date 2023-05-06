@@ -2,15 +2,16 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона Форма</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page-body">
     <header class="main-header">
-      <a class="main-header__logo" href="index.html">
-        <img class="main-header__logo-image" src="img/logo.svg" width="185" height="96" alt="Логотип «City of Sedona».">
-      </a>
       <nav class="main-nav">
+        <a class="main-header__logo" href="index.html">
+          <img class="main-header__logo-image" src="img/logo.svg" width="185" height="96" alt="Логотип «City of Sedona».">
+        </a>
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -47,65 +48,65 @@
         <img class="inner-image__welcome" src="img/sedona-hero.svg" alt="Sedona" width="282" height="214">
       </section>
       <section class="form-wrapper">
-        <h2 class="form-title">Оставьте свой отзыв</h2>
+        <h2 class="form-title form-title__main">Оставьте свой отзыв</h2>
         <p class="form-slogan">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
         <form class="form" action="https://echo.htmlacademy.ru/" method="post">
           <div class="form-wrapper_area form-area_name">
             <h3 class="form-title">Представьтесь:</h3><!-- нужна ли тут обертка? -->
-            <p class="form-name">
+            <span class="form-name">
               <label class="form-label" for="form-name">
                 Имя*:
               </label>
               <input class="form-field" type="text" id="form-name" name="form-name" placeholder="Фамилия">
-            </p>
-            <p class="form-surname">
+            </span>
+            <span class="form-surname">
             <label class="form-label" for="form-surname">
               Фамилия*:
             </label>
             <input class="form-field" type="text" id="form-surname" name="form-surname" placeholder="Имя">
-            </p>
-            <p class="form-patronymic">
+            </span>
+            <span class="form-patronymic">
             <label class="form-label" for="form-patronymic">
               Отчество*:
             </label>
             <input class="form-field" type="text" id="form-patronymic" name="form-patronymic" placeholder="Отчество">
-            </p>
+            </span>
           </div>
           <div class="form-wrapper_area form-area_contact">
             <h3 class="form-title">Контактная информация:</h3><!-- нужна ли тут обертка? -->
-            <p class="form-phone">
+            <span class="form-phone">
               <label class="form-label" for="form-phone">
                 Контактный телефон*:
               </label>
               <input class="form-field form-field__phone" type="text" id="form-phone" name="form-phone" placeholder="Введите телефон">
-            </p>
-            <p class="form-email">
+            </span>
+            <span class="form-email">
               <label class="form-label" for="form-email">
                 Электронная почта*:
               </label>
               <input class="form-field form-field__email" type="email" id="form-email" name="form-email" placeholder="Введите e-mail">
-            </p>
+            </span>
           </div>
         <fieldset class="form__group">
           <legend class="form__title">Ваше Общее впечатление:</legend>
           <ul class="form__list form-area__radio">
             <li class="form__item">
               <label class="form__control">
-                <input class="form__input visually-hidden" type="radio" name="memory-group" value="positive" checked><!-- visually-hidden --><!-- как подобрать значение name? -->
+                <input class="form__input visually-hidden" type="radio" name="memory-group" value="Положительное" checked>
                 <span class="form__mark"></span>
                 <span class="form__label">Скорее положительное</span>
               </label>
             </li>
             <li class="form__item">
               <label class="form__control">
-                <input class="form__input visually-hidden" type="radio" name="memory-group" value="negative"><!-- visually-hidden -->
+                <input class="form__input visually-hidden" type="radio" name="memory-group" value="Отрицательное">
                 <span class="form__mark"></span>
                 <span class="form__label">Скорее отрицательное</span>
               </label>
             </li>
             <li class="form__item">
               <label class="form__control">
-                <input class="form__input visually-hidden" type="radio" name="memory-group" value="neitral"><!-- visually-hidden -->
+                <input class="form__input visually-hidden" type="radio" name="memory-group" value="Нейтральное">
                 <span class="form__mark"></span>
                 <span class="form__label">Затрудняюсь ответить</span>
               </label>
@@ -117,39 +118,39 @@
           <ul class="form__list  form-area__checkbox">
             <li class="form__item">
               <label class="form__control">
-                <input class="form__input visually-hidden" type="checkbox" value="Мост Дьявол" checked><!-- visually-hidden -->
+                <input class="form__input visually-hidden" type="checkbox" value="Мост Дьявол" checked>
                 <span class="form__mark"></span>
                 <span class="form__label">Мост Дьявола</span>
               </label>
             </li>
             <li class="form__item">
               <label class="form__control">
-                <input class="form__input visually-hidden" type="checkbox" value="Гора-Колокол" checked><!-- visually-hidden -->
+                <input class="form__input visually-hidden" type="checkbox" value="Гора-Колокол" checked>
                 <span class="form__mark"></span>
                 <span class="form__label">Гора-Колокол</span>
               </label>
             </li>
             <li class="form__item">
               <label class="form__control">
-                <input class="form__input visually-hidden" type="checkbox" value="Слайд-парк" checked><!-- visually-hidden -->
+                <input class="form__input visually-hidden" type="checkbox" value="Слайд-парк" checked>
                 <span class="form__mark"></span>
                 <span class="form__label">Слайд-парк</span>
               </label>
             </li>
             <li class="form__item">
               <label class="form__control">
-                <input class="form__input visually-hidden" type="checkbox" value="Красные скалы"><!-- visually-hidden -->
+                <input class="form__input visually-hidden" type="checkbox" value="Красные скалы">
                 <span class="form__mark"></span>
                 <span class="form__label">Красные скалы</span>
               </label>
             </li>
           </ul>
         </fieldset>
-        <fieldset class="form-comment"><!-- нужна ли тут обертка? -->
+        <fieldset class="form-comment">
           <label class="form__title" for="form-comment">
             Опишите свои эмоции:
           </label>
-          <input class="form-field form-field_comment" type="textarea" id="form-comment" name="form-comment" placeholder="Опишите подробно все свои восторги">
+          <textarea class="form-field form-field_comment" type="textarea" id="form-comment" name="form-comment" placeholder="Опишите подробно все свои восторги"></textarea>
         </fieldset>
         <button class="button form-button" type="submit">Отправить отзыв</button>
         <small class="form__legend form__legend--bottom">
@@ -193,14 +194,16 @@
         </div>
       </div>
     </footer>
-    <div class="modal-container modal-error visually-hidden">
-      <h2>Что-то пошло не так!</h2>
-      <p>Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-      <button class="button modal-button" type="submit">Ок</button>
-    </div>
-    <div class="modal-container modal-success visually-hidden">
-      <h2>Ваш отзыв отправлен!</h2>
-      <p>Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
-      <button class="button modal-button" type="submit">Ок</button>
+    <div class="modal-container">
+      <div class="modal-error">
+        <h2 class="modal-title">Что-то пошло не так!</h2>
+        <p class="modal-slogan">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+        <button class="button modal-button" type="submit">Ок</button>
+      </div>
+      <div class="modal-success">
+        <h2 class="modal-title">Ваш отзыв отправлен!</h2>
+        <p class="modal-slogan">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+        <button class="button modal-button" type="submit">Закрыть окно</button>
+      </div>
     </div>
   </body>

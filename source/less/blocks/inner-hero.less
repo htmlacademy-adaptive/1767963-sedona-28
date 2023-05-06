@@ -1,14 +1,13 @@
 .inner-hero {
-  .flex;
+  .flex (wrap, center, column);
+  justify-content: space-between;
   position: relative;
   background-color: #615048;
   background-image: url("../img/main-hero-full.jpg");
   background-repeat: no-repeat;
   background-position: bottom;
   height: 214px;
-  width: 320px;
-  align-items: center;
-  justify-content: space-between;
+  width: 100%;
 
   &::after {
     position: absolute;
@@ -22,5 +21,15 @@
     width: 1200px;
     height: 57px;
     margin-top: 157px;
-  }// абсолют и релейтив пишутся тут же или отдельно? и когда можно трогать флексы?
+
+    @media (min-width: @tablet-width) {
+      margin-top: 233px;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .inner-hero {
+    height: 290px;
+  }
 }
