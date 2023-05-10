@@ -1,12 +1,19 @@
 .gallery-wrapper {
   .flex (wrap, center, column);
   justify-content: space-between;
+  width: 320px;
+  margin: 0 auto;
 }
 
 .gallery-item {
-  .flex (wrap, start, column);
+  .flex (wrap, center, column);
   justify-content: space-between;
-  margin: 0;
+  width: 320px;
+  margin: 0 auto;
+  border-top: 1px solid rgba(229, 229, 229, 1);
+  border-bottom: 1px solid rgba(229, 229, 229, 1);
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 .gallery-title {
@@ -26,7 +33,7 @@
 .gallery-capition {
   .flex (wrap, start, column);
   justify-content: space-between;
-  width: 100%;
+  width: 280px;
 }
 
 .gallery-copyright {
@@ -37,6 +44,7 @@
   font-size: 14px;
   line-height: 21px;
   text-transform: none;
+  text-align: start;
 }
 
 .gallery-counter {
@@ -67,6 +75,10 @@
 
 .video-slogan {
   text-transform: uppercase;
+  display: block;
+  width: 265px;
+  letter-spacing: 0.3px;
+  padding-bottom: 38px;
 }
 
 .video-wrapper {
