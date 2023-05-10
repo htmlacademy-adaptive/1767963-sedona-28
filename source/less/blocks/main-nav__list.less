@@ -12,7 +12,7 @@
     justify-content: space-between;
   }
 
-  .main-nav__list .main-nav__list--close { //вот тут наверное надо чтото писать про стилизацию закрытия меню
+  .main-nav__list { //вот тут наверное надо чтото писать про стилизацию закрытия меню
     display: none;
   }
 
@@ -37,11 +37,6 @@
       background-color: rgba(229, 229, 229, 1); //DOWN это состояние нажания, когда кнопка зажата?
       color: rgba(255, 255, 255, 1);
     }
-  }
-
-  .main-nav__toggle--active {
-    z-index: 5;
-    background-image: url("../img/icon-cross.svg");
   }
 }
 
@@ -77,6 +72,11 @@
   height: 22px;
   margin-left: auto;
   padding: 17px;
+  z-index: 4;
+}
+
+.main-nav__toggle--active {
+  background-image: url("../img/icon-cross.svg");
 }
 
 .main-header__logo {
