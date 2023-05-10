@@ -12,8 +12,12 @@
     justify-content: space-between;
   }
 
-  .main-nav__list { //вот тут наверное надо чтото писать про стилизацию закрытия меню
+  .main-nav__list .main-nav__list--close { //вот тут наверное надо чтото писать про стилизацию закрытия меню
     display: none;
+  }
+
+  .main-nav__list .main-nav__list--open {
+    display: block;
   }
 
   .main-nav__toggle {//надо вставить изображение как свг в верстку, тогда можно будет красить состояния?это в текущем разделе или в разделе с картинками, где файл отдельный для свг?
@@ -33,6 +37,11 @@
       background-color: rgba(229, 229, 229, 1); //DOWN это состояние нажания, когда кнопка зажата?
       color: rgba(255, 255, 255, 1);
     }
+  }
+
+  .main-nav__toggle--active {
+    z-index: 5;
+    background-image: url("../img/icon-cross.svg");
   }
 }
 
