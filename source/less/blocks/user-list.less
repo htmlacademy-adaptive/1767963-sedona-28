@@ -29,6 +29,26 @@
       border-bottom: none;
     }
   }
+
+  .user-list__item {
+    &:hover {
+      background-color: rgba(102, 158, 192, 1);
+    }
+
+    &:focus {
+      outline: 1px solid rgba(229, 229, 229, 1);
+    }
+
+    &:active {
+      background-color: rgba(229, 229, 229, 1);
+      color: rgba(255, 255, 255, 0.3);
+    }
+
+    &:disabled {
+      background-color: rgba(229, 229, 229, 1);
+      color: rgba(255, 255, 255, 1);
+    }
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -46,6 +66,21 @@
   .user-list__link {
     background-color: #ffffff;
     color: #000000;
+
+    &:hover {
+      color: rgba(129, 179, 210, 1);
+      background-color: #ffffff;
+    }
+
+    &:focus {
+      color: rgba(118, 99, 87, 1);
+      background-color: #ffffff;
+    }
+
+    &:active {
+      color: rgba(118, 99, 87, 1);
+      background-color: #ffffff;
+    }
   }
 
   .user-list__link--active {

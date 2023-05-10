@@ -1,9 +1,26 @@
 .form-wrapper_area {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  flex-direction: column;
+  .flex (wrap, center, column);
   justify-content: space-between;
+}
+
+.form-field {
+  &:hover {
+    background-color: rgba(229, 229, 229, 1);
+  }
+
+  &:focus {
+    outline: 1px solid rgba(129, 179, 210, 1);
+  }
+
+  &:active {
+    background-color: rgba(255, 255, 255, 1);
+    outline: 1px solid rgba(229, 229, 229, 1); //почему эктив не белый?
+  }
+
+  &:disabled {
+    background-color: rgba(229, 229, 229, 1);
+    color: rgba(255, 255, 255, 1);
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -13,27 +30,18 @@
 }
 
 .form-name {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  .flex (wrap, start, column);
   justify-content: space-between;
-  align-items: start;
 }
 
 .form-surname {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  .flex (wrap, start, column);
   justify-content: space-between;
-  align-items: start;
 }
 
 .form-patronymic {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  .flex (wrap, start, column);
   justify-content: space-between;
-  align-items: start;
 }
 
 .form-label {
@@ -41,11 +49,8 @@
 }
 
 .form-phone {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  .flex (wrap, start, column);
   justify-content: space-between;
-  align-items: start;
   position: relative;
 
   &::before {
@@ -65,11 +70,8 @@
 }
 
 .form-email {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  .flex (wrap, start, column);
   justify-content: space-between;
-  align-items: start;
   position: relative;
 
   &::before {

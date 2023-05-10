@@ -9,7 +9,25 @@
   text-decoration: none;
   cursor: pointer;
   border: none;
+
+  &:hover {
+    background-color: rgba(129, 179, 210, 1);
+  }
+
+  &:focus {
+    outline: 1px solid rgba(129, 179, 210, 1);
+  }
+
+  &:active {
+    background-color: rgba(129, 179, 210, 1); //CLOSE DOWN это какоето самостоятельное состояние?
+  }
+
+  &:disabled {
+    background-color: rgba(229, 229, 229, 1); //DOWN это состояние нажания, когда кнопка зажата?
+    color: rgba(255, 255, 255, 1);
+  }
 }
+
 .slogan() {
   font-size: 18px;
   line-height: 26px;
