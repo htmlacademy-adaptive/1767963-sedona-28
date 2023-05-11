@@ -82,26 +82,27 @@
 }
 
 .video-wrapper {
+  position: relative;
   .flex (wrap, center, column);
   width: 100%;
 
-  &::before {
+  &::after {
     content: "";
     position: absolute;
     background-image: url("../img/move.svg");
     background-size: 54px 48px;
-    top: 239px;
+    top: 293px;
     left: 300px;
-    z-index: 1;//почему его не видно?
+    z-index: 5;//почему его не видно?
     height: 54px;
     width: 48px;
   }
 }
 
 .video-image {
-  position: relative;
   width: 280px;
   height: 177px;
+  z-index: 1;
 }
 
 @media (min-width: @tablet-width) {
@@ -197,6 +198,15 @@
     width: 1200px;
   }
 
+  .gallery-title {
+    padding-top: 100px;
+  }
+
+  .gallery-slogan {
+    padding-bottom: 65px;
+    width: 458px;
+  }
+
   .gallery-wrapper__item {
     width: 100%;
   }
@@ -226,7 +236,7 @@
 
   .video-wrapper {
     padding-top: 62px;
-    padding-bottom: 84px;
+    padding-bottom: 64px;
   }
 
   .video-title {
