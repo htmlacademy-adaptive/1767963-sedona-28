@@ -50,10 +50,7 @@
 }
 
 .advantages-entry__item {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  flex-direction: column;
+  .flex(wrap, center, column);
   justify-content: space-between;
   padding-bottom: 25px;
 
@@ -73,6 +70,34 @@
     .flex(wrap, center, column);
     padding-bottom: 60px;
     padding-top: 157px;//переместить картинку
+  }
+
+  .advantages-entry__title {
+    align-self: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .advantages-entry__description {
+    text-align: center;
+    width: 180px;
+    margin: 0 auto;
+    padding: 26px 0 60px 0;
+  }
+
+  .advantages-entry__item--housing {
+    background-size: 78px 72px;
+    background-position: top 60px left 87px;
+  }
+
+  .advantages-entry__item--food {
+    background-size: 81px 68px;
+    background-position: top 62px left 86px;
+  }
+
+  .advantages-entry__item--gifts {
+    background-size: 67px 75px;
+    background-position: top 63px left 99px;
   }
 }
 
