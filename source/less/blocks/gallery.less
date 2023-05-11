@@ -84,24 +84,24 @@
 .video-wrapper {
   .flex (wrap, center, column);
   width: 100%;
-}
-
-.video-image {
-  position: relative;
-  width: 280px;
-  height: 177px;
 
   &::before {
     content: "";
     position: absolute;
     background-image: url("../img/move.svg");
     background-size: 54px 48px;
+    top: 239px;
+    left: 300px;
+    z-index: 1;//почему его не видно?
     height: 54px;
     width: 48px;
-    bottom: 64px;
-    left: 116px;
-    z-index: 1;//почему его не видно?
   }
+}
+
+.video-image {
+  position: relative;
+  width: 280px;
+  height: 177px;
 }
 
 @media (min-width: @tablet-width) {
@@ -114,7 +114,6 @@
   .gallery-title {
     margin: 0;
     padding-top: 66px;
-    padding-bottom: 26px;
     font-size: 30px;
     line-height: 26px;
   }
@@ -122,7 +121,7 @@
   .gallery-slogan {
     margin: 0;
     padding-top: 26px;
-    padding-bottom: 66px;
+    padding-bottom: 70px;
     width: 458px;
     font-size: 21px;
     line-height: 26px;
@@ -135,6 +134,9 @@
 
   .gallery-item {
     width: 324px;
+    padding: 0;
+    margin: 0;
+    border: none;
 
     &:first-child {
       width: 648px;
@@ -159,6 +161,7 @@
   .gallery-capition {
     flex-direction: row;
     justify-content: space-between;
+    width: 100%;
   }
 
   .gallery-counter {
@@ -178,9 +181,9 @@
 
   .video-slogan {
     margin: 0;
-    width: 445px;
-    padding-top: 52px;
-    padding-bottom: 66px;
+    width: 460px;
+    padding-top: 26px;
+    padding-bottom: 70px;
   }
 
   .video-image {
@@ -232,7 +235,7 @@
 
   .video-slogan {
     margin: 0;
-    width: 445px;
+    width: 450px;
     padding-bottom: 64px;
   }
 
