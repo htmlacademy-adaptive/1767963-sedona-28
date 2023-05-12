@@ -3,22 +3,38 @@
   line-height: 26px;
   font-weight: 700;
   text-transform: uppercase;
-  margin: 0;
+  display: block;
+  width: 280px;
+  margin: 0 auto;
   padding-top: 32px;
+  letter-spacing: 0.3px;
 }
 
 .advantages__intro {
   color: rgb(51, 51, 51);
   text-transform: uppercase;
-  margin: 0;
+  display: block;
+  width: 280px;
+  margin: 0 auto;
   padding-top: 35px;
   padding-bottom: 16px;
+  letter-spacing: 0.3px;
 }
 
 @media (min-width: @tablet-width) {
   .advantages__wrapper {
     width: 768px;
     .flex(wrap, center, column);
+  }
+
+  .advantages__slogan {
+    padding-top: 48px;
+    width: 520px;
+  }
+
+  .advantages__intro {
+    width: 520px;
+    padding-bottom: 56px;
   }
 }
 
@@ -29,5 +45,14 @@
 
   .advantages__wrapper {
     width: 1200px;
+  }
+
+  .advantages__slogan {
+    padding-top: 59px;
+    width: 480px;
+  }
+
+  .advantages__intro {
+    padding-bottom: 44px;
   }
 }

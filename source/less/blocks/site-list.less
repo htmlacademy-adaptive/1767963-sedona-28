@@ -16,6 +16,35 @@
     z-index: 2;
     top: 0;
   }
+
+  .site-list__link {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(1, 1, 1, 0.2);
+
+    &:nth-of-type(2) {
+      border-top: none;
+    } //не получается убрать нижний бордер у последнего и верхний у первого
+  }
+
+  .site-list__item {
+    &:hover {
+      background-color: rgba(102, 158, 192, 1);
+    }
+
+    &:focus {
+      outline: 1px solid rgba(229, 229, 229, 1);
+    }
+
+    &:active {
+      background-color: rgba(229, 229, 229, 1);
+      color: rgba(255, 255, 255, 0.3);
+    }
+
+    &:disabled {
+      background-color: rgba(229, 229, 229, 1);
+      color: rgba(255, 255, 255, 1);
+    }
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -33,6 +62,21 @@
   .site-list__link {
     background-color: #ffffff;
     color: #000000;
+
+    &:hover {
+      color: rgba(129, 179, 210, 1);
+      background-color: #ffffff;
+    }
+
+    &:focus {
+      color: rgba(118, 99, 87, 1);
+      background-color: #ffffff;
+    }
+
+    &:active {
+      color: rgba(118, 99, 87, 1);
+      background-color: #ffffff;//почему появляется глубой фон при нажатии? изза свойств мобильного меню?
+    }
   }
 
   .site-list__link--active {
@@ -57,7 +101,7 @@
 }
 
 
-.site-list__link--close { //внутри медиавырадения не хочет показывать "только для мобильного"
+/*.site-list__link--close { //внутри медиавырадения не хочет показывать "только для мобильного"
   position: relative;
 
   &::before {
@@ -76,4 +120,4 @@
     right: 16px;
     top: 17px;
   }
-}
+}*/

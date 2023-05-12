@@ -1,9 +1,26 @@
 .form-wrapper_area {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  flex-direction: column;
+  .flex (wrap, center, column);
   justify-content: space-between;
+}
+
+.form-field {
+  &:hover {
+    background-color: rgba(229, 229, 229, 1);
+  }
+
+  &:focus {
+    outline: 1px solid rgba(129, 179, 210, 1);
+  }
+
+  &:active {
+    background-color: rgba(255, 255, 255, 1);
+    outline: 1px solid rgba(229, 229, 229, 1); //почему эктив не белый?
+  }
+
+  &:disabled {
+    background-color: rgba(229, 229, 229, 1);
+    color: rgba(255, 255, 255, 1);
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -13,27 +30,18 @@
 }
 
 .form-name {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  .flex (wrap, start, column);
   justify-content: space-between;
-  align-items: start;
 }
 
 .form-surname {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  .flex (wrap, start, column);
   justify-content: space-between;
-  align-items: start;
 }
 
 .form-patronymic {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  .flex (wrap, start, column);
   justify-content: space-between;
-  align-items: start;
 }
 
 .form-label {
@@ -41,11 +49,8 @@
 }
 
 .form-phone {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  .flex (wrap, start, column);
   justify-content: space-between;
-  align-items: start;
   position: relative;
 
   &::before {
@@ -59,17 +64,14 @@
     height: 58px;
     width: 58px;
     right: 0;
-    top: 21px;
+    top: 37px;
     z-index: 1;
   }
 }
 
 .form-email {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  .flex (wrap, start, column);
   justify-content: space-between;
-  align-items: start;
   position: relative;
 
   &::before {
@@ -83,7 +85,7 @@
     height: 58px;
     width: 58px;
     right: 0;
-    top: 21px;
+    top: 37px;
     z-index: 1;
   }
 }
@@ -109,7 +111,7 @@
   padding-left: 20px;
 
   &:hover .form__mark {
-    border-color: #e5e5e5;
+    background-color: rgba(229, 229, 229, 1);
   }
 
   &:focus .form__mark {
@@ -118,7 +120,15 @@
   }
 
   &:active .form__mark {
-    border-color: #d5d5d5;
+    background-color: rgba(213, 213, 213, 1);
+
+    &::before {
+      opacity: 0.3;
+    }
+
+    &::after {
+      opacity: 0.3;
+    }
   }
 }
 

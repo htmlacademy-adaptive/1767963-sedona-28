@@ -23,7 +23,7 @@
   &:active {
     background-color: #ffffff;
     color: #000000;
-    outline: 2px solid #e5e5e5;
+    outline: 2px solid rgba(229, 229, 229, 1);
   }
 
   &:disabled {
@@ -32,7 +32,6 @@
   }
 
   &::placeholder {
-    background-color: #f2f2f2;
     color: rgba(0, 0, 0, 0.3);
     text-align: start;
   }
@@ -131,12 +130,27 @@
 
 @media (min-width: @tablet-width) {
   .form {
+    position: relative;
     display: grid;
     grid-template-columns: 295px 295px;
     justify-content: space-between;
     width: 648px;
     margin: 0 auto;
     padding-bottom: 64px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 338px;
+      background-color: rgba(219, 219, 219, 1);
+      left: 324px;
+      top: 0;
+    }
+  }
+
+  .form-label {
+    padding-top: 16px;
   }
 
   .form__group {
@@ -154,19 +168,63 @@
     width: 263px;
   }
 
-  .form-title {
-    font-size: 21px;
-    line-height: 26px;
-    margin: 0;
-    padding-bottom: 28px;
-  }
-
   .form__title {
+    display: block;
     font-size: 21px;
     line-height: 26px;
     width: 308px;
     margin: 0;
     padding-bottom: 28px;
+  }
+
+  .form__group .form__title {
+    position: relative;
+    width: 308px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 123px;
+      height: 1px;
+      background-color: rgba(219, 219, 219, 1);
+      left: -170px;
+      top: 13px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 123px;
+      height: 1px;
+      background-color: rgba(219, 219, 219, 1);
+      right: -170px;
+      top: 13px;
+    }
+  }
+
+  .form-comment .form__title {
+    position: relative;
+    width: 648px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 123px;
+      height: 1px;
+      background-color: rgba(219, 219, 219, 1);
+      left: 0;
+      top: 13px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 123px;
+      height: 1px;
+      background-color: rgba(219, 219, 219, 1);
+      right: 0;
+      top: 13px;
+    }
   }
 
   .form-title__main {
@@ -179,10 +237,6 @@
     width: 435px;
     margin: 0;
     padding-bottom: 90px;
-  }
-
-  .form-label {
-    padding-left: 16px;//не получается просто сделать отступ между полем и нижней подписью, нужен еще один класс?
   }
 
   .form-wrapper_area {
@@ -235,6 +289,20 @@
     width: 960px;
     margin: 0 auto;
     padding-bottom: 64px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 338px;
+      background-color: rgba(219, 219, 219, 1);
+      left: 480px;
+      top: 0;
+    }
+  }
+
+  .form-label {
+    padding-top: 16px;
   }
 
   .form-field {
@@ -273,5 +341,55 @@
 
   .form__legend--bottom {
     margin-right: 96px;
+  }
+
+  .form__group .form__title {
+    position: relative;
+    width: 308px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 1px;
+      background-color: rgba(219, 219, 219, 1);
+      left: -327px;
+      top: 13px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 1px;
+      background-color: rgba(219, 219, 219, 1);
+      right: -327px;
+      top: 13px;
+    }
+  }
+
+  .form-comment .form__title {
+    position: relative;
+    width: 960px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 1px;
+      background-color: rgba(219, 219, 219, 1);
+      left: 0;
+      top: 13px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 1px;
+      background-color: rgba(219, 219, 219, 1);
+      right: 0;
+      top: 13px;
+    }
   }
 }
