@@ -8,10 +8,22 @@
 
   @media (min-width: @desktop-width) {
     width: 1200px;
-  } //карта не как в презентации, наверное бэкграундом и позиционирование
+  }
 }
 
 .map-image {
   display: block;
   margin: 0 auto;
+}
+
+.map img {
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    height: 350px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1200px;
+    height: 350px;
+  }
 }
