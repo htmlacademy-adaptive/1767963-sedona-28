@@ -45,14 +45,18 @@
       <h1 class="visually-hidden">Галерея фотографий пользователей.</h1>
       <section class="inner-hero">
         <h2 class="visually-hidden">Sedona</h2><!-- картинка хироблок -->
-        <img class="inner-image__welcome" src="img/sedona-hero.svg" alt="Sedona" width="282" height="214">
+        <img class="inner-image__welcome" src="img/sedona-hero.svg" alt="Sedona" width="229" height="39">
       </section>
       <section class="gallery-wrapper">
         <h2 class="gallery-title">Фото и видео</h2>
         <p class="gallery-slogan">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
         <div class="gallery-wrapper__item">
             <figure class="gallery-item">
-            <img class="gallery-image" src="img/road-mobile.jpg" width="280" height="280" alt="Дорога Седоны на закате">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/road-desktop1x.webp 1x, img/road-desktop2x.webp 2x">
+              <source media="(min-width: 768px)" srcset="img/road-tablet1x.webp 1x, img/road-tablet2x.webp 2x">
+              <img class="gallery-image" src="img/road-mobile1x.webp" srcset="img/road-mobile2x.webp" width="280" height="280" alt="Дорога Седоны на закате">
+            </picture>
             <figcaption class="gallery-capition">
               <h3 class="gallery-description">Неродные просторы
                 <cite class="gallery-copyright">
@@ -64,7 +68,11 @@
             </figcaption>
           </figure>
           <figure class="gallery-item">
-            <img class="gallery-image" src="img/flower-mobile.jpg" width="280" height="280" alt="Цветущий кактус на фоне гор">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/flower-desktop1x.webp 1x, img/flower-desktop2x.webp 2x">
+              <source media="(min-width: 768px)" srcset="img/flower-tablet1x.webp 1x, img/flower-tablet2x.webp 2x">
+              <img class="gallery-image" src="img/flower-mobile1x.webp" srcset="img/flower-mobile2x.webp" width="280" height="280" alt="Цветущий кактус на фоне гор">
+            </picture>
             <figcaption class="gallery-capition">
               <h3 class="gallery-description">
                 Местная растительность
@@ -77,7 +85,11 @@
             </figcaption>
           </figure>
           <figure class="gallery-item">
-            <img class="gallery-image" src="img/forest-mobile.jpg" width="280" height="280" alt="Серпантин в горах Седоны">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/forest-desktop1x.webp 1x, img/forest-desktop2x.webp 2x">
+              <source media="(min-width: 768px)" srcset="img/forest-tablet1x.webp 1x, img/forest-tablet2x.webp 2x">
+              <img class="gallery-image" src="img/forest-mobile1x.webp" srcset="img/forest-mobile2x.webp" width="280" height="280" alt="Серпантин в горах Седоны">
+            </picture>
             <figcaption class="gallery-capition">
               <h3 class="gallery-description">
                 Дорога на север
@@ -90,7 +102,11 @@
             </figcaption>
           </figure>
           <figure class="gallery-item">
-            <img class="gallery-image" src="img/brige-mobile.jpg" width="280" height="280" alt="каменный мост на фоне каньона">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/brige-desktop1x.webp 1x, img/brige-desktop2x.webp 2x">
+              <source media="(min-width: 768px)" srcset="img/brige-tablet1x.webp 1x, img/brige-tablet2x.webp 2x">
+              <img class="gallery-image" src="img/brige-mobile1x.webp" srcset="img/brige-mobile2x.webp" width="280" height="280" alt="каменный мост на фоне каньона">
+            </picture>
             <figcaption class="gallery-capition">
               <h3 class="gallery-description">
                 Мост Дьявола
@@ -107,7 +123,11 @@
       <section class="video-wrapper">
         <h2 class="video-title">Все еще сомневаетесь?</h2>
         <p class="video-slogan">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
-        <img class="video-image" src="img/video-mobile.jpg" width="280" height="177" alt="Автомобильное движение в горах">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/video-desktop1x.webp 1x, img/video-desktop2x.webp 2x">
+          <source media="(min-width: 768px)" srcset="img/video-tablet1x.webp 1x, img/video-tablet2x.webp 2x">
+          <img class="video-image" src="img/video-mobile1x.webp" srcset="img/video-mobile2x.webp" width="280" height="177" alt="Автомобильное движение в горах">
+        </picture>
       </section>
     </main>
     <footer class="footer">
