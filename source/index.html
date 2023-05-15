@@ -59,7 +59,11 @@
                 <h3 class="advantages__title">Настоящий городок</h3>
                 <p class="advantages__number">— №1 —</p>
                 <p class="advantages__description">Седона не аттракцион для туристов, там течёт своя жизнь</p>
-                <img class="advantages-image" src="img/photo-city-mobile.jpg" alt="Улица городка Седона." width="320" height="260">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photo-city-desktop1x.webp 1x, img/photo-city-desktop2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-city-tablet1x.webp 1x, img/photo-city-tablet2x.webp 2x">
+                  <img class="advantages-image" src="img/photo-city-mobile1x.webp" srcset="img/photo-city-mobile2x.webp"  alt="Улица городка Седона." width="320" height="260">
+                </picture>
               </div>
               <ul class="advantages-entry__list">
                 <li class="advantages-entry__item advantages-entry__item--housing">
