@@ -70,6 +70,7 @@
 }
 
 .advantages__item--wrapper {
+  width: 320px;
   background-color: #81b3d2;
   color: #ffffff;
 
@@ -115,15 +116,20 @@
     justify-content: space-between;
   }
 
+  .advantages__item {
+    .flex(wrap, center, row);
+  }
+
   .advantages__item--wrapper {
-    width: 768px;
-    height: 256px;
+    width: 256px;
     .flex(wrap, center, column);
     justify-content: space-between;
   }//как поменять порядок только в одном блоке? не получается переместить картинку(((((
 
-  .advantages__item--wrapper img {
-    margin-right: -22px;
+  .advantages__item img {
+    display: block;
+    margin: 0;
+    padding: 0;
     width: 512px;
     height: 256px;
   }
@@ -135,8 +141,8 @@
 
   .advantages__description {
     width: 190px;
-    margin: 0 auto;
-    padding-bottom: 31px;
+    margin: 0;
+    padding-bottom: 40px;
   }
 
   .advantages-bottom__list {
@@ -174,13 +180,16 @@
     width: 1200px;
   }
 
+  .advantages__item {
+    .flex(wrap, center, row);
+  }
+
   .advantages__item--wrapper {
-    width: 1200px;
+    width: 400px;
     height: 256px;
   }
 
-  .advantages__item--wrapper img {
-    margin-right: -35px;
+  .advantages__item img {
     width: 800px;
     height: 256px;
   }
