@@ -3,13 +3,17 @@
   justify-content: space-between;
   position: relative;
   background-color: #615048;
-  background-image: url("../img/main-hero-full.jpg");
+  background-image: url("../img/back-mobile-hero1x.webp");
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: 901px 389px;
+  background-position: 50% 40%;
   height: 389px;
   width: 100%;
   overflow: hidden;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/back-mobile-hero2x.webp");
+    background-position: 50% 28%;
+  }
 
   &::after {
     position: absolute;
@@ -38,4 +42,27 @@
 .hero-image__welcome {
   display: block;
   padding-top: 90px;
+}
+
+@media (min-width: @tablet-width) {
+  .hero {
+    background-image: url("../img/back-hero 1x.webp");
+    background-position: 50% 30%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/back-hero2x.webp");
+      background-position: 50% 30%;
+      background-size: 1306px auto;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .hero {
+    background-position: 100%;
+
+    @media (min-resolution: 2dppx) {
+      background-size: 1306px auto;
+    }
+  }
 }
