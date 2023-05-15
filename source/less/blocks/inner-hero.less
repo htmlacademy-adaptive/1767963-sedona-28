@@ -3,11 +3,17 @@
   justify-content: space-between;
   position: relative;
   background-color: #615048;
-  background-image: url("../img/main-hero-full.jpg");
+  background-image: url("../img/back-mobile-inner-hero1x.webp");
   background-repeat: no-repeat;
   background-position: bottom;
-  height: 214px;
+  height: 158px;
   width: 100%;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/back-mobile-inner-hero2x.webp");
+    background-size: 640px auto;
+    background-position: 15% 40%;
+  }
 
   &::after {
     position: absolute;
@@ -21,7 +27,7 @@
     background-position: center;
     width: 320px;
     height: 57px;
-    margin-top: 157px;
+    margin-top: 101px;
 
     @media (min-width: @tablet-width) {
       margin-top: 233px;
@@ -34,8 +40,29 @@
   }
 }
 
+.inner-image__welcome {
+  padding-top: 52px;
+}
+
 @media (min-width: @tablet-width) {
   .inner-hero {
     height: 290px;
+    background-image: url("../img/back-inner-hero-tablet1x.webp");
+    background-position: 50% 90%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/back-inner-hero-tablet2x.webp");
+      background-size: 1306px auto;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .inner-hero {
+    background-image: url("../img/back-inner-hero-desktop 1x.webp");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/back-inner-hero-desktop 2x.webp");
+    }
   }
 }
