@@ -53,19 +53,18 @@
   justify-content: space-between;
   position: relative;
 
-  &::before {
-    content: "";
+  .form-ikon__wrapper {
+    display: block;
     position: absolute;
-    background-image: url("../img/phone.svg");
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-color: #e6e6e6;
-    background-size: 20px 20px;
-    height: 58px;
     width: 58px;
+    height: 58px;
+    background-color: #e6e6e6;
     right: 0;
     top: 37px;
-    z-index: 1;
+
+    .form-ikon__phone {
+      margin-top: 20px;
+    }
   }
 }
 
@@ -74,19 +73,18 @@
   justify-content: space-between;
   position: relative;
 
-  &::before {
-    content: "";
+  .form-ikon__wrapper {
+    display: block;
     position: absolute;
-    background-image: url("../img/mail.svg");
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-color: #e6e6e6;
-    background-size: 20px 20px;
-    height: 58px;
     width: 58px;
+    height: 58px;
+    background-color: #e6e6e6;
     right: 0;
     top: 37px;
-    z-index: 1;
+
+    .form-ikon__mail {
+      margin-top: 23px;
+    }
   }
 }
 
