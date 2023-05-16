@@ -23,11 +23,42 @@
   }
 }
 
+.form-label {
+  display: block;
+  margin-left: 18px;
+}
+
+@media (max-width: @mobile-width-only) {
+  .form__title {
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 20px;
+  }
+
+  .form-wrapper_area {
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  .form__group {
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 34px;
+  }
+
+  .form-name {
+    padding-bottom: 16px;
+  }
+
+  .form-surname {
+    padding-bottom: 16px;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .form-area_contact {
     justify-content: start;
   }
 }
+
 
 .form-name {
   .flex (wrap, start, column);
@@ -42,16 +73,14 @@
 .form-patronymic {
   .flex (wrap, start, column);
   justify-content: space-between;
-}
-
-.form-label {
-  display: block;
+  padding-bottom: 39px;
 }
 
 .form-phone {
   .flex (wrap, start, column);
   justify-content: space-between;
   position: relative;
+  padding-bottom: 16px;
 
   .form-ikon__wrapper {
     display: block;
@@ -61,6 +90,10 @@
     background-color: #e6e6e6;
     right: 0;
     top: 37px;
+
+    @media (max-width: @mobile-width-only) {
+      top: 21px;
+    }
 
     .form-ikon__phone {
       margin-top: 20px;
@@ -72,6 +105,7 @@
   .flex (wrap, start, column);
   justify-content: space-between;
   position: relative;
+  padding-bottom: 34px;
 
   .form-ikon__wrapper {
     display: block;
@@ -81,6 +115,10 @@
     background-color: #e6e6e6;
     right: 0;
     top: 37px;
+
+    @media (max-width: @mobile-width-only) {
+      top: 21px;
+    }
 
     .form-ikon__mail {
       margin-top: 23px;
