@@ -42,8 +42,21 @@
   }
 }
 
-.copyright__link {
-  color: #000000;
+.contacts__link {
+  &:hover {
+    outline: none;
+    color: #81b3d2;
+  }
+
+  &:focus {
+    outline: none;
+    color: #766357;
+  }
+
+  &:active {
+    outline: none;
+    color: #b3b3b3;
+  }
 }
 
 @media (min-width: @mobile-width-only) {
