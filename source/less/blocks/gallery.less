@@ -50,13 +50,13 @@
 .gallery-counter {
   display: block;
   font-weight: 700;
-  background-image: url("../img/like-icon.svg");
-  background-repeat: no-repeat;
-  background-color: transparent;
-  background-position: left bottom;
-  padding-left: 37px;
-  padding-top: 16px;
-}//как делать стрелочку запуска видело?
+  padding-top: 11px;
+
+  .gallery__ikon {
+    margin-right: 14px;
+  }
+}
+
 .gallery-slogan {
   display: block;
   text-transform: uppercase;
@@ -89,11 +89,11 @@
   &::after {
     content: "";
     position: absolute;
-    background-image: url("../img/move.svg");
+    background-image: url("../img/movi.svg");
     background-size: 54px 48px;
     top: 257px;
     left: 136px;
-    z-index: 3;//почему его не видно?
+    z-index: 3;
     height: 54px;
     width: 48px;
   }
@@ -178,6 +178,10 @@
   .gallery-counter {
     padding-right: 20px;
     padding-top: 28px;
+
+    .gallery__ikon {
+      margin-right: 9px;
+    }
   }
 
   .video-wrapper {
@@ -256,7 +260,7 @@
     position: absolute;
     top: 187px;
     background-color: rgba(0, 0, 0, 0.3);
-    color: #ffffff;//как перекрасить иконку? высота юлока юудет соответсвовать после нового размера картинки
+    color: #ffffff;
   }
 
   .video-wrapper {
@@ -282,5 +286,15 @@
   .video-image {
     width: 800px;
     height: 500px;
+  }
+}
+
+.gallery__ikon {
+  @media (max-width: @mobile-width-only) {
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    opacity: 0.3;
   }
 }
