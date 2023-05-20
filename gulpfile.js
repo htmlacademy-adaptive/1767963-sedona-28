@@ -78,7 +78,7 @@ export const svg = () =>
 
 export const copy = (done) => {
   gulp.src(['source/fonts/*.{woff2,woff}',
-  'source/*.ico',] {
+  'source/*.ico',], {
     base: 'source'
   })
   .pipe(gulp.dest('build'))
