@@ -39,7 +39,7 @@ export const html = () => {
 //script
 
 const scripts = () => {
-  return gulp.src('source/js/script.js')
+  return gulp.src('source/js/*.js')
   .pipe(gulp.dest('build/js'))
   .pipe(browser.stream());
   }
@@ -59,13 +59,13 @@ export const copyImages = () => {
 
 //webp
 
-export const createWabp = () => {
-  return gulp.src('source/img/**/*.{jpg,png}')
+const createWebp = () => {
+  return gulp.src('source/img/**/*.{png,jpg}')
   .pipe(squoosh({
-    webp: {}
+  webp: {}
   }))
-  .pipe(gulp.dest('build/img'));
-}
+  .pipe(gulp.dest('build/img'))
+  }
 
 //svg
 
@@ -73,6 +73,18 @@ export const svg = () =>
   gulp.src('source/img/*.svg')
     .pipe(svgo())
     .pipe(gulp.dest('build/img'));
+
+
+const sprite = () => {
+  return gulp.src('source/img/icon/*.svg')
+  .pipe(svgo())
+  .pipe(svgstore({
+  inlineSvg: true
+  }))
+  .pipe(rename('sprite.svg'))
+  .pipe(gulp.dest('build/img'));
+  }
+
 
 //copy
 
