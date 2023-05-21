@@ -10,6 +10,21 @@
   justify-content: space-between;
 }
 
+.advantages__item--wrapper {
+  width: 320px;
+  background-color: #81b3d2;
+  color: #ffffff;
+  padding-top: 70px;
+
+  &:nth-of-type(2) {
+    padding-top: 35px;
+  }
+
+  .advantages__description {
+    color: #ffffff;
+  }
+}
+
 .advantages__item {
   display: flex;
   flex-wrap: wrap;
@@ -30,7 +45,7 @@
       z-index: 1;
       background-color: transparent;
       background-image: url("../img/divider-bottom.svg");
-      background-size: 768px 37px;
+      background-size: 320px 37px;
       background-position: center;
       width: 320px;
       margin-bottom: 190px;
@@ -51,12 +66,6 @@
   .slogan;
   display: block;
   margin: 0;
-
-  &:first-of-type {
-    @media (max-width: @mobile-width-only) {
-      padding-top: 54px;
-    }
-  }
 }
 
 .advantages__description {
@@ -66,17 +75,7 @@
   margin: 0 auto;
   text-transform: uppercase;
   margin-bottom: 40px;
-  letter-spacing: 0.3px;
-}
-
-.advantages__item--wrapper {
-  width: 320px;
-  background-color: #81b3d2;
-  color: #ffffff;
-
-  .advantages__description {
-    color: #ffffff;
-  }
+  letter-spacing: 0.1px;
 }
 
 .advantages-image {
@@ -109,6 +108,10 @@
   letter-spacing: 0.3px;//не переносится, нужен br?
 }
 
+.advantages-bottom__title {
+  padding-top: 24px;
+}
+
 @media (min-width: @tablet-width) {
   .advantages__list {
     width: 768px;
@@ -128,7 +131,7 @@
     width: 256px;
     .flex(wrap, center, column);
     justify-content: space-between;
-  }//как поменять порядок только в одном блоке? не получается переместить картинку(((((
+  }
 
   .advantages__item img {
     display: block;
