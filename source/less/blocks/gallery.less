@@ -31,7 +31,7 @@
 }
 
 .gallery-capition {
-  .flex (wrap, start, column);
+  .flex (wrap, flex-start, column);
   justify-content: space-between;
   width: 280px;
 }
@@ -70,6 +70,8 @@
 }
 
 .gallery-image {
+  cursor: pointer;
+
   &:hover {
     opacity: 0.8;
   }
@@ -104,6 +106,7 @@
 
   &::after {
     content: "";
+    cursor: pointer;
     position: absolute;
     background-image: url("../img/movi.svg");
     background-size: 54px 48px;
@@ -119,6 +122,19 @@
   width: 280px;
   height: 177px;
   z-index: 1;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    outline: 1px solid #f2f2f2;
+  }
+
+  &:active {
+    outline: 1px solid #f2f2f2;
+    opacity: 0.8;
+  }
 }
 
 @media (min-width: @tablet-width) {
