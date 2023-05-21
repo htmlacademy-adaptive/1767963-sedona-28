@@ -1,36 +1,52 @@
 .map {
   background-color: #615048;
   width: 320px;
+  background-image: url("../img/map-mobile1x.webp");
+  background-position: 50% 30%;
+  background-repeat: no-repeat;
+  height: 350px;
 
-  iframe {
-    display: block;
-    border: none;
-    margin: 0 auto;
-    width: 100%;
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/map-mobile2x.webp");
+    background-position: 50% 28%;
   }
 
   @media (min-width: @tablet-width) {
     width: 768px;
+    background-image: url("../img/map-tablet1x.webp");
+    background-position: 100% 30%;
+    height: 350px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/map-tablet2x.webp");
+      background-position: 50% 28%;
+    }
   }
 
   @media (min-width: @desktop-width) {
     width: 1200px;
+    background-image: url("../img/map-desktop1x.webp");
+    background-position: 100% 30%;
+    height: 350px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/map-desktop2x.webp");
+      background-position: 50% 28%;
+    }
   }
 }
 
-.map-image {
-  display: block;
+iframe {
+  display: none;
+  border: none;
   margin: 0 auto;
-}
+  width: 100%;
 
-.map img {
   @media (min-width: @tablet-width) {
     width: 768px;
-    height: 350px;
   }
 
   @media (min-width: @desktop-width) {
     width: 1200px;
-    height: 350px;
   }
 }
