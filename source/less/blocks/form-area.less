@@ -52,7 +52,7 @@
 
   .form-wrapper_area {
     border-bottom: 1px solid #e5e5e5;
-    width: 280px;
+    width: 100%;
     margin: 0 auto;
   }
 
@@ -75,7 +75,7 @@
   }
 
   .form__group {
-    width: 280px;
+    width: 100%;
     border-bottom: 1px solid #e5e5e5;
     margin: 0 auto;
     padding-bottom: 10px;
@@ -100,10 +100,6 @@
 .form-name {
   .flex (wrap, flex-start, column);
   justify-content: space-between;
-
-  .form-label {
-    padding-top: 25px;
-  }
 }
 
 .form-surname {
@@ -121,10 +117,6 @@
   .flex (wrap, flex-start, column);
   justify-content: space-between;
   position: relative;
-
-  .form-label {
-    padding-top: 25px;
-  }
 
   .form-icon__wrapper {
     display: block;
@@ -288,5 +280,13 @@
       align-self: center;
       padding-top: 15px;
     }
+  }
+
+  .form-area__radio .form__item:last-child {
+    padding-top: 15px;
+  }
+
+  .form-area__radio .form__item:first-child {
+    margin-left: 48px;
   }
 }

@@ -23,7 +23,6 @@
 .advantages__item {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   flex-direction: column;
   justify-content: space-between;
   background-color: #eeeeee;
@@ -150,7 +149,7 @@
   }
 
   .advantages__item {
-    .flex(wrap, center, row);
+    .flex(wrap, stretch, row);
 
     &:nth-child(2) {
       flex-direction: row-reverse;
@@ -250,12 +249,11 @@
   }
 
   .advantages__item {
-    .flex(wrap, center, row);
+    .flex(wrap, stretch, row);
   }
 
   .advantages__item--wrapper {
     width: 400px;
-    height: 256px;
   }
 
   .advantages__item img {
