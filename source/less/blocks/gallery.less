@@ -18,16 +18,18 @@
 
 .gallery-title {
   .slogan;
+  margin: 0 auto;
+  padding-top: 38px;
 }
 
 .gallery-description {
   display: block;
   margin: 0;
   padding-top: 15px;
-  padding-bottom: 11px;
+  padding-bottom: 10px;
   text-transform: uppercase;
   font-size: 14px;
-  line-height: 21px;
+  line-height: 21px;//почему название фото не выравнивается?
 }
 
 .gallery-capition {
@@ -48,19 +50,37 @@
 }
 
 .gallery-counter {
-  display: block;
+  .flex (wrap, center, row);
+  justify-content: flex-start;
   font-weight: 700;
-  padding-top: 11px;
+  width: 70px;
+}
 
-  .gallery__ikon {
-    margin-right: 14px;
-  }
+.gallery__icon--number {
+  display: block;
+  padding-top: 5px;
+  padding-left: 15px;
 }
 
 .gallery-slogan {
   display: block;
   text-transform: uppercase;
   width: 280px;
+  margin: 0 auto;
+  padding-top: 26px;
+  padding-bottom: 34px;
+}
+
+.gallery__ikon {
+  display: block;
+
+  @media (max-width: @mobile-width-only) {
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    opacity: 0.3;
+  }
 }
 
 .gallery-wrapper__item {
@@ -71,6 +91,9 @@
 
 .gallery-image {
   cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  padding: 0;
 
   &:hover {
     opacity: 0.8;
@@ -89,14 +112,17 @@
 
 .video-title {
   .slogan;
+  margin: 0 auto;
+  padding-top: 19px;
+  padding-bottom: 12px;
 }
 
 .video-slogan {
   text-transform: uppercase;
   display: block;
   width: 265px;
-  letter-spacing: 0.3px;
-  padding-bottom: 38px;
+  letter-spacing: 0.1px;
+  padding-bottom: 25px;
 }
 
 .video-wrapper {
@@ -322,12 +348,3 @@
   }
 }
 
-.gallery__ikon {
-  @media (max-width: @mobile-width-only) {
-    opacity: 0.3;
-  }
-
-  @media (min-width: @tablet-width) {
-    opacity: 0.3;
-  }
-}
