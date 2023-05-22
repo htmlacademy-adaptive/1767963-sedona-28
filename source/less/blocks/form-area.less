@@ -100,6 +100,10 @@
 .form-name {
   .flex (wrap, flex-start, column);
   justify-content: space-between;
+
+  .form-label {
+    padding-top: 25px;
+  }
 }
 
 .form-surname {
@@ -118,6 +122,10 @@
   justify-content: space-between;
   position: relative;
 
+  .form-label {
+    padding-top: 25px;
+  }
+
   .form-icon__wrapper {
     display: block;
     position: absolute;
@@ -125,7 +133,7 @@
     height: 58px;
     background-color: #e6e6e6;
     right: 0;
-    top: 47px;
+    top: 46px;
 
     @media (max-width: @mobile-width-only) {
       top: 21px;
@@ -144,6 +152,10 @@
   padding-top: 15px;
   padding-bottom: 34px;
 
+  .form-label {
+    padding-top: 0;
+  }
+
   .form-icon__wrapper {
     display: block;
     position: absolute;
@@ -151,10 +163,10 @@
     height: 58px;
     background-color: #e6e6e6;
     right: 0;
-    top: 37px;
+    top: 36px;
 
     @media (max-width: @mobile-width-only) {
-      top: 438px;
+      top: 36px;
     }
 
     .form-icon__mail {

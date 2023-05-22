@@ -102,6 +102,7 @@
   display: block;
   width: max-content;
   margin-left: auto;
+  margin-bottom: 16px;
 }
 
 .form__legend--bottom {
@@ -152,7 +153,7 @@
       content: "";
       position: absolute;
       width: 1px;
-      height: 338px;
+      height: 350px;
       background-color: rgba(219, 219, 219, 1);
       left: 324px;
       top: 0;
@@ -168,51 +169,16 @@
     .flex (wrap, center,row);
   }
 
-  .form-comment {
-    grid-column: 1 / -1;
-    .flex (wrap, center,column);
-    justify-content: center;
-  }
-
   .form-field {
     width: 263px;
   }
 
-  .form__title {
+  .form__title:first-of-type {
     display: block;
     font-size: 21px;
     line-height: 26px;
-    width: 308px;
     margin: 0;
     padding-bottom: 28px;
-  }
-
-  .form__group .form__title {
-    position: relative;
-    width: 308px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      width: 123px;
-      height: 1px;
-      background-color: rgba(219, 219, 219, 1);
-      left: -170px;
-      top: 13px;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      width: 123px;
-      height: 1px;
-      background-color: rgba(219, 219, 219, 1);
-      right: -170px;
-      top: 13px;
-    }
-  }
-
-  .form-comment .form__title {
     position: relative;
     width: 648px;
 
@@ -223,7 +189,7 @@
       height: 1px;
       background-color: rgba(219, 219, 219, 1);
       left: 0;
-      top: 13px;
+      top: 10px;
     }
 
     &::after {
@@ -233,7 +199,47 @@
       height: 1px;
       background-color: rgba(219, 219, 219, 1);
       right: 0;
-      top: 13px;
+      top: 10px;
+    }
+  }
+
+  .form__group .form__title {
+    position: relative;
+    width: 308px;
+    display: block;
+    font-size: 21px;
+    line-height: 26px;
+    margin: 0;
+    padding-bottom: 28px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 123px;
+      height: 1px;
+      background-color: rgba(219, 219, 219, 1);
+      left: -170px;
+      top: 25px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 123px;
+      height: 1px;
+      background-color: rgba(219, 219, 219, 1);
+      right: -170px;
+      top: 25px;
+    }
+  }
+
+  .form-comment {
+    grid-column: 1 / -1;
+    .flex (wrap, center,column);
+    justify-content: center;
+
+    .form__title {
+      margin-right: auto;
     }
   }
 
@@ -292,14 +298,21 @@
   }
 
   .form-field_comment {
-    width: 100%;
-    padding: 18px 16px 48px 16px;
+    width: 616px;
+    height: 118px;
+    padding: 18px 16px 24px 16px;
   }
 
   .form__legend--bottom {
     font-size: 14px;
     text-transform: uppercase;
     align-self: center;
+    margin-top: 20px;
+  }
+
+  .form-button {
+    width: 324px;
+    margin-top: -2px;
   }
 }
 
