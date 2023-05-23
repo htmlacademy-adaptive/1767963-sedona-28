@@ -1,4 +1,4 @@
-.modal-container {
+.modal-container--success {
   position: fixed;
   .flex (wrap, center,column);
   top: 0;
@@ -50,6 +50,19 @@
     padding: 18px 64px 14px;
     border: 20px solid #f2f2f2;
   }
+}
+
+
+.modal-container--error {
+  position: fixed;
+  .flex (wrap, center,column);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  display: none;
 }
 
 .modal-title {
