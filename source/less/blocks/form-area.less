@@ -201,11 +201,6 @@
     background-color: rgba(229, 229, 229, 1);
   }
 
-  &:focus .form__mark {
-    background-color: #f2f2f2;
-    outline: 1px solid #81b3d2;
-  }
-
   &:active .form__mark {
     background-color: rgba(213, 213, 213, 1);
 
@@ -217,6 +212,11 @@
       opacity: 0.3;
     }
   }
+}
+
+.form__input:focus + .form__mark {
+  background-color: #f2f2f2;
+  outline: 1px solid #81b3b2;
 }
 
 .form__mark {
