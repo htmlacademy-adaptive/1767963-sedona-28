@@ -22,10 +22,17 @@
   .button;
   height: 48px;
   width: 48px;
+  transition: 0.5s;
 
   &:hover {
     outline: none;
     background-color: #81b3d2;
+    transform: scale(1.05);
+    transition: 0.5s;
+
+    & svg {
+      opacity: 0.7;
+    }
   }
 
   &:focus {
@@ -36,8 +43,9 @@
   &:active {
     outline: none;
     background-color: #5496bd;
+    transition: 0.5s;
 
-    .social__icon--youtube {
+    & svg {
       opacity: 0.3;
     }
   }
