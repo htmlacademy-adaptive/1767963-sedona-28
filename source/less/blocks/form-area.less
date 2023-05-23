@@ -1,4 +1,4 @@
-.form-wrapper_area {
+.form-wrapper__area {
   .flex (wrap, center, column);
   justify-content: space-between;
 }
@@ -51,7 +51,7 @@
     padding: 0;
   }
 
-  .form-wrapper_area {
+  .form-wrapper__area {
     border-bottom: 1px solid #e5e5e5;
     width: 100%;
     margin: 0 auto;
@@ -71,7 +71,7 @@
     width: 247px;
   }
 
-  .form-area_name {
+  .form-wrapper__area--name {
     border-top: 1px solid #e5e5e5;
   }
 
@@ -92,7 +92,7 @@
 }
 
 @media (min-width: @tablet-width) {
-  .form-area_contact {
+  .form-wrapper__area--contact {
     justify-content: flex-start;
   }
 }
@@ -119,7 +119,7 @@
   justify-content: space-between;
   position: relative;
 
-  .form-icon__wrapper {
+  .form-phone__icon-wrapper {
     display: block;
     position: absolute;
     width: 58px;
@@ -132,7 +132,7 @@
       top: 21px;
     }
 
-    .form-icon__phone {
+    .form-phone__icon {
       margin-top: 20px;
     }
   }
@@ -149,7 +149,8 @@
     padding-top: 0;
   }
 
-  .form-icon__wrapper {
+  .form-phone__icon-wrapper,
+  .form-email__icon-wrapper {
     display: block;
     position: absolute;
     width: 58px;
@@ -162,7 +163,7 @@
       top: 36px;
     }
 
-    .form-icon__mail {
+    .form-email__icon {
       margin-top: 23px;
     }
   }
@@ -202,7 +203,7 @@
 
   &:focus .form__mark {
     background-color: #f2f2f2;
-    outline: 2px solid #e5e5e5;
+    outline: 1px solid #81b3d2;
   }
 
   &:active .form__mark {
@@ -291,7 +292,8 @@
     margin-left: 48px;
   }
 
-  .form-phone .form-icon__wrapper {
+  .form-phone .form-phone__icon-wrapper,
+  .form-email .form-email__icon-wrapper {
     top: 48px;
   }
 }

@@ -1,10 +1,10 @@
 const menuButton =  document.querySelector('.main-nav__toggle');
 const mobiMenuFirst = document.querySelector('.site-list');
 const mobiMenuSecond = document.querySelector('.user-list');
-let noJs = Array.from(document.querySelectorAll('.main-nav--nojs'));
+let noJs = Array.from(document.querySelectorAll('.main-nav__nojs'));
 
 for (let i = 0; i < 2; i++) {
-  noJs[i].classList.remove('main-nav--nojs');
+  noJs[i].classList.remove('main-nav__nojs');
 }
 
 menuButton.addEventListener('click', function(){

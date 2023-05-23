@@ -1,4 +1,4 @@
-.advantages-entry__list {
+.advantages__list-entry__list {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -11,7 +11,7 @@
   padding-top: 23px;
 }
 
-.advantages-entry__title {
+.advantages__list-entry__title {
   .slogan;
   align-self: flex-start;
   padding-left: 65px;
@@ -19,7 +19,7 @@
   margin: 0;
 }
 
-.advantages-entry__description {
+.advantages__list-entry__description {
   display: block;
   color: rgb(51, 51, 51);
   text-transform: uppercase;
@@ -27,7 +27,7 @@
   padding-left: 67px;
 }
 
-.advantages-entry__item--housing {
+.advantages__list-entry__item--housing {
   display: block;
   background-image: url("../img/house.svg");
   background-repeat: no-repeat;
@@ -35,12 +35,12 @@
   background-size: 39px 36px;
   background-position: 18px 4px;
 
-  .advantages-entry__description {
+  .advantages__list-entry__description {
     letter-spacing: 0.2px;
   }
 }
 
-.advantages-entry__item--food {
+.advantages__list-entry__item--food {
   display: block;
   background-image: url("../img/burger.svg");
   background-repeat: no-repeat;
@@ -49,7 +49,7 @@
   background-position: 18px 4px;
 }
 
-.advantages-entry__item--gifts {
+.advantages__list-entry__item--gifts {
   display: block;
   background-image: url("../img/gift.svg");
   background-repeat: no-repeat;
@@ -58,7 +58,7 @@
   background-position: 21px 3px;
 }
 
-.advantages-entry__item {
+.advantages__list-entry__item {
   .flex(wrap, center, column);
   justify-content: space-between;
   padding-bottom: 10px;
@@ -69,48 +69,48 @@
 }
 
 @media (min-width: @tablet-width) {
-  .advantages-entry__list {
+  .advantages__list-entry__list {
     width: 768px;
     .flex(wrap, center, row);
     padding: 0;
   }
 
-  .advantages-entry__item {
+  .advantages__list-entry__item {
     width: 256px;
     .flex(wrap, center, column);
     padding-bottom: 59px;
     padding-top: 157px;
   }
 
-  .advantages-entry__title {
+  .advantages__list-entry__title {
     align-self: center;
     margin: 0;
     padding: 0;
     font-size: 21px;
   }
 
-  .advantages-entry__description {
+  .advantages__list-entry__description {
     text-align: center;
     width: 180px;
     margin: 0 auto;
     padding: 26px 0 0 0;
   }
 
-  .advantages-entry__item--housing {
+  .advantages__list-entry__item--housing {
     background-size: 78px 72px;
     background-position: top 60px left 87px;
   }
 
-  .advantages-entry__item--food {
+  .advantages__list-entry__item--food {
     background-size: 81px 68px;
     background-position: top 62px left 86px;
 
-    .advantages-entry__description {
+    .advantages__list-entry__description {
       width: 156px;
     }
   }
 
-  .advantages-entry__item--gifts {
+  .advantages__list-entry__item--gifts {
     background-size: 67px 75px;
     background-position: top 32px left 99px;
     padding-top: 122px;
@@ -119,59 +119,59 @@
 
 
 @media (min-width: @desktop-width) {
-  .advantages-entry__list {
+  .advantages__list-entry__list {
     width: 1200px;
   }
 
-  .advantages-entry__item {
+  .advantages__list-entry__item {
     width: 400px;
     padding-bottom: 69px;
     padding-top: 159px;
   }
 
-  .advantages-entry__title {
+  .advantages__list-entry__title {
     padding-top: 11px;
   }
 
-  .advantages-entry__description {
+  .advantages__list-entry__description {
     width: 300px;
     padding-top: 24px;
   }
 
-  .advantages-entry__item--housing {
+  .advantages__list-entry__item--housing {
     background-size: 80px 73px;
     background-position: top 68px left 160px;
   }
 
-  .advantages-entry__item--food {
+  .advantages__list-entry__item--food {
     background-size: 73px 69px;
     background-position: top 70px left 163px;
   }
 
-  .advantages-entry__item:nth-child(2) .advantages-entry__title {
+  .advantages__list-entry__item:nth-child(2) .advantages__list-entry__title {
     padding-top: 5px;
   }
 
-  .advantages-entry__item:nth-child(2) .advantages-entry__description {
+  .advantages__list-entry__item:nth-child(2) .advantages__list-entry__description {
     padding-top: 22px;
     width: 300px;
   }
 
-  .advantages-entry__item--gifts {
+  .advantages__list-entry__item--gifts {
     background-size: 78px 75px;
     background-position: top 55px left 160px;
   }
 
-  .advantages-entry__item:nth-child(3) {
+  .advantages__list-entry__item:nth-child(3) {
     padding-top: 117px;
     padding-bottom: 44px;
   }
 
-  .advantages-entry__item:nth-child(3) .advantages-entry__title {
+  .advantages__list-entry__item:nth-child(3) .advantages__list-entry__title {
     padding-top: 40px;
   }
 
-  .advantages-entry__item:nth-child(3) .advantages-entry__description {
+  .advantages__list-entry__item:nth-child(3) .advantages__list-entry__description {
     width: 265px;
     padding-top: 25px;
     padding-bottom: 10px;
