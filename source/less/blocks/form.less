@@ -39,6 +39,7 @@
 
 .form-wrapper {
   .flex (wrap, center,column);
+  padding-top: 36px;
 }
 
 .form__group {
@@ -53,21 +54,26 @@
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
-  align-items: start;
+  align-items: flex-start;
   flex-direction: column;
   justify-content: space-between;
+  margin-left: 20px;
 }
 
 .form-comment {
   border: none;
   margin: 0;
-  padding: 0 0 56px;
+  padding: 0 0 50px;
+
+  .form__title {
+    padding-bottom: 22px;
+  }
 }
 
 .form-field_comment {
-  height: 150px; //rows количество строк в высоту, там нужно расчитывать относительно высобы шрицта и межстрочных интервалов?
+  height: 118px;
   display: inline-block;
-  resize: auto;
+  resize: none;
   cursor: text;
   white-space: pre-wrap;
   overflow-wrap: break-word;
@@ -85,6 +91,8 @@
 
 .form-title {
   .title;
+  display: block;
+  margin: 0 auto;
 }
 
 .form-label {
@@ -95,23 +103,29 @@
   display: block;
   width: max-content;
   margin-left: auto;
+  margin-bottom: 16px;
 }
 
 .form__legend--bottom {
-  font-size: 11px;
+  font-size: 14px;
   line-height: 21px;
   color: rgba(51, 51, 51, 0.6);
+  margin-right: 19px;
+  margin-top: 2px;
 }
 
 .form-button {
   font-family: "PT Sans", sans-serif;
   .button;
-  width: 100%;
+  width: 88%;
   padding-top: 16px;
   padding-bottom: 16px;
 }
 
 .form-slogan {
+  display: block;
+  margin: 0 auto;
+  padding-top: 25px;
   text-transform: uppercase;
   color: #333333;
 }
@@ -142,7 +156,7 @@
       content: "";
       position: absolute;
       width: 1px;
-      height: 338px;
+      height: 350px;
       background-color: rgba(219, 219, 219, 1);
       left: 324px;
       top: 0;
@@ -150,7 +164,15 @@
   }
 
   .form-label {
-    padding-top: 16px;
+    padding-top: 24px;
+  }
+
+  .form-surname {
+    margin-top: -6px;
+  }
+
+  .form-patronymic {
+    margin-top: -9px;
   }
 
   .form__group {
@@ -158,51 +180,16 @@
     .flex (wrap, center,row);
   }
 
-  .form-comment {
-    grid-column: 1 / -1;
-    .flex (wrap, center,column);
-    justify-content: center;
-  }
-
   .form-field {
     width: 263px;
   }
 
-  .form__title {
+  .form__title:first-of-type {
     display: block;
     font-size: 21px;
     line-height: 26px;
-    width: 308px;
     margin: 0;
     padding-bottom: 28px;
-  }
-
-  .form__group .form__title {
-    position: relative;
-    width: 308px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      width: 123px;
-      height: 1px;
-      background-color: rgba(219, 219, 219, 1);
-      left: -170px;
-      top: 13px;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      width: 123px;
-      height: 1px;
-      background-color: rgba(219, 219, 219, 1);
-      right: -170px;
-      top: 13px;
-    }
-  }
-
-  .form-comment .form__title {
     position: relative;
     width: 648px;
 
@@ -213,7 +200,7 @@
       height: 1px;
       background-color: rgba(219, 219, 219, 1);
       left: 0;
-      top: 13px;
+      top: 10px;
     }
 
     &::after {
@@ -223,24 +210,78 @@
       height: 1px;
       background-color: rgba(219, 219, 219, 1);
       right: 0;
-      top: 13px;
+      top: 10px;
     }
+  }
+
+  .form__group:first-of-type .form__title::after {
+    top: 10px;
+  }
+
+  .form__group:first-of-type .form__title::before {
+    top: 10px;
+  }
+
+  .form__group .form__title {
+    position: relative;
+    width: 308px;
+    display: block;
+    font-size: 21px;
+    line-height: 26px;
+    margin: 0;
+    padding-bottom: 28px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 123px;
+      height: 1px;
+      background-color: rgba(219, 219, 219, 1);
+      left: -170px;
+      top: 25px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 123px;
+      height: 1px;
+      background-color: rgba(219, 219, 219, 1);
+      right: -170px;
+      top: 25px;
+    }
+  }
+
+  .form-comment {
+    grid-column: 1 / -1;
+    .flex (wrap, center,column);
+    justify-content: center;
+
+    .form__title {
+      margin-right: auto;
+    }
+  }
+
+  .form-slogan {
+    display: block;
+    width: 435px;
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 90px;
+  }
+
+  .form-title {
+    font-size: 21px;
+    padding-top: 20px;
   }
 
   .form-title__main {
     font-size: 30px;
-    padding-top: 64px;
-    padding-bottom: 20px;
-  }
-
-  .form-slogan {
-    width: 435px;
-    margin: 0;
-    padding-bottom: 90px;
+    padding-top: 30px;
   }
 
   .form-wrapper_area {
-    padding-bottom: 63px;
+    padding-bottom: 25px;
   }
 
   .form-area__radio {
@@ -248,12 +289,14 @@
     width: 576px;
     margin: 0 auto;
 
-    &:last-child {
-      padding-bottom: 48px;
-    }
-
     .form__item {
       width: 280px;
+      padding-top: 10px;
+
+      &:last-child {
+        padding-top: 0;
+        padding-bottom: 35px;
+      }
     }
   }
 
@@ -263,23 +306,33 @@
     margin: 0 auto;
 
     &:last-child {
-      padding-bottom: 42px;
+      padding-bottom: 28px;
     }
 
     .form__item {
       width: 224px;
+      padding-top: 10px;
+      padding-bottom: 25px;
     }
   }
 
   .form-field_comment {
-    width: 100%;
-    padding: 0 0 48px 0;
+    width: 616px;
+    height: 118px;
+    padding: 18px 16px 24px 16px;
   }
 
   .form__legend--bottom {
     font-size: 14px;
     text-transform: uppercase;
     align-self: center;
+    margin-top: 20px;
+    margin-right: -1px;
+  }
+
+  .form-button {
+    width: 324px;
+    margin-top: -2px;
   }
 }
 
@@ -299,10 +352,39 @@
       left: 480px;
       top: 0;
     }
+
+    &-name {
+      margin-top: 7px;
+    }
+
+    &-surname {
+      margin-top: 0;
+    }
+
+    &-patronymic {
+      margin-top: 0;
+    }
+  }
+
+  .form__group:first-of-type .form__title::after {
+    top: 20px;
+  }
+
+  .form__group:first-of-type .form__title::before {
+    top: 20px;
+  }
+
+  .form-title__main {
+    padding-top: 80px;
+  }
+
+  .form-slogan {
+    padding-top: 32px;
+    padding-bottom: 48px;
   }
 
   .form-label {
-    padding-top: 16px;
+    padding-top: 17px;
   }
 
   .form-field {
@@ -312,30 +394,57 @@
   .form-area__radio {
     width: 960px;
 
+    .form__item {
+      padding-left: 15px;
+    }
+
     &:last-child {
-      padding-bottom: 56px;
+      margin-left: -10px;
+      padding-bottom: 40px;
     }
   }
 
   .form-area__checkbox {
     width: 960px;
+    margin-left: 44px;
+    justify-content: center;
+
 
     &:last-child {
-      padding-bottom: 56px;
+      padding-top: 20px;
+      padding-bottom: 36px;
     }
 
     .form__item {
-      min-width: 170px;//выровнять отступы 31px?
+      min-width: 170px;
     }
   }
 
+  .form-area__checkbox .form__item:first-child {
+    margin-left: -60px;
+    padding-left: 9px;
+  }
+
+  .form-area__checkbox .form__item:nth-child(2) {
+    padding-left: 10px;
+  }
+
+  .form-area__checkbox .form__item:nth-child(3) {
+    padding-left: 9px;
+  }
+
+  .form-area__checkbox .form__item:last-child {
+    margin-right: -6px;
+  }
+
   .form-field_comment {
-    width: 768px;
-    padding: 0 0 48px 0;
+    width: 736px;
+    height: 128px;
+    padding: 16px;
   }
 
   .form-button {
-    width: 372px;
+    width: 384px;
     margin-left: 96px;
   }
 
@@ -344,6 +453,7 @@
   }
 
   .form__group .form__title {
+    margin: 0 auto;
     position: relative;
     width: 308px;
 
@@ -354,7 +464,7 @@
       height: 1px;
       background-color: rgba(219, 219, 219, 1);
       left: -327px;
-      top: 13px;
+      top: 35px;
     }
 
     &::after {
@@ -364,13 +474,14 @@
       height: 1px;
       background-color: rgba(219, 219, 219, 1);
       right: -327px;
-      top: 13px;
+      top: 35px;
     }
   }
 
   .form-comment .form__title {
     position: relative;
     width: 960px;
+    padding-top: 36px;
 
     &::before {
       content: "";
@@ -379,7 +490,7 @@
       height: 1px;
       background-color: rgba(219, 219, 219, 1);
       left: 0;
-      top: 13px;
+      top: 47px;
     }
 
     &::after {
@@ -389,7 +500,11 @@
       height: 1px;
       background-color: rgba(219, 219, 219, 1);
       right: 0;
-      top: 13px;
+      top: 47px;
     }
+  }
+
+  .form__group:nth-of-type(2) .form__title {
+    padding-right: 48px;
   }
 }

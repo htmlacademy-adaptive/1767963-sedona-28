@@ -10,10 +10,19 @@
   justify-content: space-between;
 }
 
+.advantages__item--wrapper {
+  width: 320px;
+  background-color: #81b3d2;
+  color: #ffffff;
+
+  .advantages__description {
+    color: #ffffff;
+  }
+}
+
 .advantages__item {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   flex-direction: column;
   justify-content: space-between;
   background-color: #eeeeee;
@@ -30,7 +39,7 @@
       z-index: 1;
       background-color: transparent;
       background-image: url("../img/divider-bottom.svg");
-      background-size: 768px 37px;
+      background-size: 320px 37px;
       background-position: center;
       width: 320px;
       margin-bottom: 190px;
@@ -45,18 +54,19 @@
       }
     }
   }
+
+  @media (max-width: @mobile-width-only) {
+    &:nth-child(2) {
+      margin-top: -33px;
+    }
+  }
 }
 
 .advantages__title {
   .slogan;
   display: block;
   margin: 0;
-
-  &:first-of-type {
-    @media (max-width: @mobile-width-only) {
-      padding-top: 54px;
-    }
-  }
+  padding-top: 70px;
 }
 
 .advantages__description {
@@ -66,17 +76,7 @@
   margin: 0 auto;
   text-transform: uppercase;
   margin-bottom: 40px;
-  letter-spacing: 0.3px;
-}
-
-.advantages__item--wrapper {
-  width: 320px;
-  background-color: #81b3d2;
-  color: #ffffff;
-
-  .advantages__description {
-    color: #ffffff;
-  }
+  letter-spacing: 0.1px;
 }
 
 .advantages-image {
@@ -92,6 +92,10 @@
   .flex(wrap, center, row);
 }
 
+.advantages-bottom__title {
+  padding-top: 22px;
+}
+
 .advantages-bottom__item {
   .flex(wrap, center, column);
   width: 284px;
@@ -101,12 +105,40 @@
   &:last-child {
     border-bottom: none;
   }
+
+  .advantages__number {
+    margin: 0 auto;
+    padding-top: 10px;
+  }
+
+  &:nth-of-type(2) {
+    .advantages-bottom__title {
+      padding-top: 27px;
+    }
+
+    .advantages-bottom__description {
+      width: 250px;
+    }
+  }
+
+  &:nth-of-type(3) {
+    .advantages-bottom__title {
+      padding-top: 27px;
+    }
+
+    .advantages-bottom__description {
+      padding-bottom: 30px;
+    }
+  }
 }
 
 .advantages-bottom__description {
   display: block;
-  width: 270px;
-  letter-spacing: 0.3px;//не переносится, нужен br?
+  width: 265px;
+  letter-spacing: 0.2px;
+  margin: 0 auto;
+  padding-top: 16px;
+  padding-bottom: 24px;
 }
 
 @media (min-width: @tablet-width) {
@@ -117,18 +149,26 @@
   }
 
   .advantages__item {
-    .flex(wrap, center, row);
+    .flex(wrap, stretch, row);
 
     &:nth-child(2) {
       flex-direction: row-reverse;
     }
   }
 
+  .advantages__item:nth-child(2) .advantages__description {
+    width: 180px;
+  }
+
+  .advantages__item:nth-child(2) .advantages__title {
+    width: 180px;
+  }
+
   .advantages__item--wrapper {
     width: 256px;
     .flex(wrap, center, column);
     justify-content: space-between;
-  }//как поменять порядок только в одном блоке? не получается переместить картинку(((((
+  }
 
   .advantages__item img {
     display: block;
@@ -140,13 +180,20 @@
 
   .advantages__title {
     width: 160px;
-    padding-top: 52px;//тут нужен бр и отмена бр?
+    padding-top: 52px;
+    padding-bottom: 6px;
+    font-size: 21px;
+  }
+
+  .advantages__number {
+    padding-bottom: 8px;
+    margin-top: 10px;
   }
 
   .advantages__description {
-    width: 190px;
+    width: 200px;
     margin: 0;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
   }
 
   .advantages-bottom__list {
@@ -160,20 +207,37 @@
     padding: 0;
     width: 256px;
     border: none;
+
+    .advantages__number {
+      padding-top: 12px;
+    }
   }
 
   .advantages-bottom__title {
-    padding-top: 41px;
-    width: 100px;
+    padding-top: 23px;
+    padding-bottom: 0;
+    width: 120px;
     text-align: center;
   }
 
+  .advantages-bottom__item:nth-child(2) .advantages-bottom__title {
+    padding-top: 42px;
+  }
+
+  .advantages-bottom__item:nth-child(2) .advantages-bottom__description {
+    width: 170px;
+  }
+
+  .advantages-bottom__item:nth-child(3) .advantages-bottom__title {
+    padding-top: 7px;
+  }
+
   .advantages-bottom__description {
-    padding-bottom: 63px;
-    width: 190px;
+    padding-bottom: 42px;
+    width: 290px;
 
     &:nth-of-type(2) {
-      width: 175px;
+      width: 200px;
       letter-spacing: 0.4;
     }
   }
@@ -185,12 +249,11 @@
   }
 
   .advantages__item {
-    .flex(wrap, center, row);
+    .flex(wrap, stretch, row);
   }
 
   .advantages__item--wrapper {
     width: 400px;
-    height: 256px;
   }
 
   .advantages__item img {
@@ -198,8 +261,26 @@
     height: 256px;
   }
 
+  .advantages__title {
+    padding-bottom: 0;
+  }
+
+  .advantages__number {
+    margin: 0 auto;
+    padding: 0 0 10px 0;
+  }
+
   .advantages__description {
-    width: 300px;
+    width: 280px;
+    padding-bottom: 52px;
+  }
+
+  .advantages__item:nth-child(2) .advantages__description {
+    width: 230px;
+  }
+
+  .advantages__item:nth-child(2) .advantages__number {
+    padding-top: 3px;
   }
 
   .advantages-bottom__list {
@@ -214,13 +295,31 @@
   }
 
   .advantages-bottom__title {
-    padding-top: 52px;
-    width: 100px;
+    padding-top: 50px;
+    width: 120px;
     text-align: center;
   }
 
   .advantages-bottom__description {
+    padding-top: 14px;
     padding-bottom: 52px;
-    width: 300px;
+    width: 400px;
+
+    &:nth-of-type(2) {
+      width: 300px;
+      letter-spacing: 0.4;
+    }
+  }
+
+  .advantages-bottom__item:nth-child(2) .advantages-bottom__title {
+    padding-top: 52px;
+  }
+
+  .advantages-bottom__item:nth-child(2) .advantages-bottom__description {
+    width: 280px;
+  }
+
+  .advantages-bottom__item:nth-child(3) .advantages-bottom__title {
+    padding-top: 30px;
   }
 }

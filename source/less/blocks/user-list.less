@@ -49,11 +49,17 @@
       color: rgba(255, 255, 255, 1);
     }
 
-    &:nth-of-type(2) {
+    &:nth-of-type(2)::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 7px;
       background-image: url("../img/gradient.png");
       background-position: bottom;
       background-repeat: no-repeat;
-      background-size: 320px 7px;//не получился градиент нижней кнопки
+      background-size: 320px 7px;
     }
   }
 }
@@ -73,6 +79,7 @@
   .user-list__link {
     background-color: #ffffff;
     color: #000000;
+    font-size: 14px;
 
     &:hover {
       color: rgba(129, 179, 210, 1);

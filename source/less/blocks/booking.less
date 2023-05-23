@@ -3,17 +3,22 @@
   padding-bottom: 49px;
 }
 
+.br--mobile {
+  display: none;
+}
+
 .booking__slogan {
   .slogan;
   margin: 0 auto;
   padding-top: 38px;
+  padding-bottom: 20px;
+  font-size: 21px;
 }
 
 .booking__intro {
   color: #333333;
   text-transform: uppercase;
   margin: 0;
-  padding-top: 16px;
   padding-bottom: 32px;
 }
 
@@ -34,12 +39,19 @@
     font-size: 30px;
     line-height: 26px;
     padding-top: 60px;
+    padding-bottom: 30px;
   }
 
   .booking__intro {
-    font-size: 21px;
-    line-height: 26px;
+    font-size: 14px;
+    line-height: 23px;
+    margin: 0 auto;
     padding-bottom: 44px;
+    width: 450px;
+  }
+
+  .br--mobile {
+    display: block;
   }
 }
 
@@ -52,5 +64,10 @@
   .booking__slogan {
     font-size: 30px;
     line-height: 30px;
-  } //слишком большие буквы в описании букинга, по макету размер как прописано, но показывает слошком большие
+  }
+
+  .booking__intro {
+    width: 450px;
+    padding-bottom: 42px;
+  }
 }
