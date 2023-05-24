@@ -1,3 +1,8 @@
+// Viewports
+@tablet-width: 768px;
+@desktop-width: 1200px;
+@mobile-width-only: 767px;
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -10,15 +15,15 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-// Viewports
-@tablet-width: 768px;
-@desktop-width: 1200px;
-@mobile-width-only: 767px;
+
+.html {
+  height: 100%;
+}
 
 .main-container {
   .flex (wrap, center,column);
   flex-grow: 1;
-  justify-content: center;
+  justify-content: flex-start;
   background-color: #ffffff;
 }
 
@@ -58,5 +63,15 @@
 
   .main-container {
     width: 1200px;
+  }
+}
+
+.br--tablet {
+  display: none;
+}
+
+@media (min-width: 768px) & (min-width: 120px) {
+  .br--tablet {
+    display: block;
   }
 }
