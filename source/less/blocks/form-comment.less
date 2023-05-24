@@ -1,0 +1,114 @@
+.form-comment {
+  border: none;
+  margin: 0;
+  padding: 0 0 50px;
+
+  .form__title {
+    padding-bottom: 22px;
+  }
+}
+
+.form-field_comment {
+  height: 118px;
+  display: inline-block;
+  resize: none;
+  cursor: text;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+
+  &::placeholder {
+    text-align: start;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+  }
+}
+
+.form__legend--bottom {
+  font-size: 14px;
+  line-height: 21px;
+  color: rgba(51, 51, 51, 0.6);
+  margin-right: 19px;
+  margin-top: 2px;
+}
+
+.form-button {
+  font-family: "PT Sans", "Arial", sans-serif;
+  .button;
+  width: 88%;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+@media (min-width: @tablet-width) {
+  .form-comment {
+    grid-column: 1 / -1;
+    .flex (wrap, center,column);
+    justify-content: center;
+
+    .form__title {
+      margin-right: auto;
+    }
+  }
+
+  .form-field_comment {
+    width: 616px;
+    height: 118px;
+    padding: 18px 16px 24px 16px;
+  }
+
+  .form__legend--bottom {
+    font-size: 14px;
+    text-transform: uppercase;
+    align-self: center;
+    margin-top: 20px;
+    margin-right: -1px;
+  }
+
+  .form-button {
+    width: 324px;
+    margin-top: -2px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-field_comment {
+    width: 736px;
+    height: 128px;
+    padding: 16px;
+  }
+
+  .form-button {
+    width: 384px;
+    margin-left: 96px;
+  }
+
+  .form__legend--bottom {
+    margin-right: 96px;
+  }
+
+  .form-comment .form__title {
+    position: relative;
+    width: 960px;
+    padding-top: 36px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 1px;
+      background-color: rgba(219, 219, 219, 1);
+      left: 0;
+      top: 47px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 1px;
+      background-color: rgba(219, 219, 219, 1);
+      right: 0;
+      top: 47px;
+    }
+  }
+}
