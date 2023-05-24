@@ -1,0 +1,145 @@
+.bottom__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  .flex(wrap, center, row);
+}
+
+.bottom__title {
+  padding-top: 22px;
+}
+
+.bottom__item {
+  .flex(wrap, center, column);
+  width: 284px;
+  margin: 0 auto;
+  border-bottom: 1px solid rgba(214, 214, 214, 1);
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  .bottom__number {
+    margin: 0 auto;
+    padding-top: 10px;
+  }
+
+  &:nth-of-type(2) {
+    .bottom__title {
+      padding-top: 27px;
+    }
+
+    .bottom__description {
+      width: 250px;
+    }
+  }
+
+  &:nth-of-type(3) {
+    .bottom__title {
+      padding-top: 27px;
+    }
+
+    .bottom__description {
+      padding-bottom: 30px;
+    }
+  }
+}
+
+.bottom__description {
+  display: block;
+  width: 265px;
+  letter-spacing: 0.2px;
+  margin: 0 auto;
+  padding-top: 16px;
+  padding-bottom: 24px;
+}
+
+@media (min-width: @tablet-width) {
+  .bottom__list {
+    width: 768px;
+    .flex(wrap, center, row);
+    justify-content: space-evenly;
+  }
+
+  .bottom__item {
+    margin: 0;
+    padding: 0;
+    width: 256px;
+    border: none;
+
+    .bottom__number {
+      padding-top: 12px;
+    }
+  }
+
+  .bottom__title {
+    padding-top: 23px;
+    padding-bottom: 0;
+    width: 120px;
+    text-align: center;
+  }
+
+  .bottom__item:nth-child(2) .bottom__title {
+    padding-top: 42px;
+  }
+
+  .bottom__item:nth-child(2) .bottom__description {
+    width: 170px;
+  }
+
+  .bottom__item:nth-child(3) .bottom__title {
+    padding-top: 7px;
+  }
+
+  .bottom__description {
+    padding-bottom: 42px;
+    width: 290px;
+
+    &:nth-of-type(2) {
+      width: 200px;
+      letter-spacing: 0.4;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .bottom__list {
+    width: 1200px;
+  }
+
+  .bottom__item {
+    margin: 0;
+    padding: 0;
+    width: 400px;
+    border: none;
+  }
+
+  .bottom__title {
+    padding-top: 50px;
+    width: 120px;
+    text-align: center;
+  }
+
+  .bottom__description {
+    padding-top: 14px;
+    padding-bottom: 52px;
+    width: 400px;
+
+    &:nth-of-type(2) {
+      width: 300px;
+      letter-spacing: 0.4;
+    }
+  }
+
+  .bottom__item:nth-child(2) .bottom__title {
+    padding-top: 52px;
+  }
+
+  .bottom__item:nth-child(2) .bottom__description {
+    width: 280px;
+  }
+
+  .bottom__item:nth-child(3) .bottom__title {
+    padding-top: 30px;
+  }
+}

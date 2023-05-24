@@ -119,6 +119,10 @@
   justify-content: space-between;
   position: relative;
 
+  .form-phone__icon {
+    margin-top: 20px;
+  }
+
   .form-phone__icon-wrapper {
     display: block;
     position: absolute;
@@ -126,14 +130,10 @@
     height: 58px;
     background-color: #e6e6e6;
     right: 0;
-    top: 45px;
+    top: 48px;
 
     @media (max-width: @mobile-width-only) {
       top: 21px;
-    }
-
-    .form-phone__icon {
-      margin-top: 20px;
     }
   }
 }
@@ -144,6 +144,10 @@
   position: relative;
   padding-top: 15px;
   padding-bottom: 34px;
+
+  .form-email__icon {
+    margin-top: 23px;
+  }
 
   .form-label {
     padding-top: 0;
@@ -161,10 +165,6 @@
 
     @media (max-width: @mobile-width-only) {
       top: 36px;
-    }
-
-    .form-email__icon {
-      margin-top: 23px;
     }
   }
 }
@@ -292,8 +292,7 @@
     margin-left: 48px;
   }
 
-  .form-phone .form-phone__icon-wrapper,
   .form-email .form-email__icon-wrapper {
-    top: 48px;
+    top: 36px;
   }
 }

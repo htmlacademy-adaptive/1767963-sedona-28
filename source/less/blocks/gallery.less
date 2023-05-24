@@ -1,66 +1,14 @@
-.gallery-wrapper {
+.gallery {
   .flex (wrap, center, column);
   justify-content: space-between;
   width: 320px;
   margin: 0 auto;
-}
-
-.gallery-item {
-  .flex (wrap, center, column);
-  justify-content: space-between;
-  width: 320px;
-  margin: 0 auto;
-  border-top: 1px solid rgba(229, 229, 229, 1);
-  border-bottom: 1px solid rgba(229, 229, 229, 1);
-  padding-top: 25px;
-  padding-bottom: 25px;
 }
 
 .gallery-title {
   .slogan;
   margin: 0 auto;
   padding-top: 38px;
-}
-
-.gallery-description {
-  display: block;
-  margin: 0;
-  padding-top: 15px;
-  padding-bottom: 10px;
-  text-transform: uppercase;
-  font-size: 14px;
-  line-height: 21px;
-  text-align: left;
-}
-
-.gallery-capition {
-  .flex (wrap, flex-start, column);
-  justify-content: space-between;
-  width: 280px;
-}
-
-.gallery-copyright {
-  font-style: normal;
-  display: block;
-  margin-right: auto;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 21px;
-  text-transform: none;
-  text-align: start;
-}
-
-.gallery-counter {
-  .flex (wrap, center, row);
-  justify-content: flex-start;
-  font-weight: 700;
-  width: 70px;
-}
-
-.gallery-number {
-  display: block;
-  padding-top: 5px;
-  padding-left: 15px;
 }
 
 .gallery-slogan {
@@ -72,109 +20,22 @@
   padding-bottom: 34px;
 }
 
-.gallery-icon {
-  display: block;
-
-  @media (max-width: @mobile-width-only) {
-    opacity: 0.3;
-  }
-
-  @media (min-width: @tablet-width) {
-    opacity: 0.3;
-  }
-}
-
-.gallery-wrapper__item {
+.gallery-wrapper {
   .flex (wrap, center, column);
   width: 100%;
   margin: 0;
 }
 
-.gallery-image {
-  cursor: pointer;
-  display: block;
-  margin: 0 auto;
-  padding: 0;
-
-  &:hover {
-    opacity: 0.8;
-  }
-
-  &:focus {
-    outline: 1px solid #f2f2f2;
-  }
-
-  &:active {
-    outline: 1px solid #f2f2f2;
-    opacity: 0.8;
-  }
-}
-
-
-.video-title {
-  .slogan;
-  margin: 0 auto;
-  padding-top: 19px;
-  padding-bottom: 12px;
-}
-
-.video-slogan {
-  text-transform: uppercase;
-  display: block;
-  width: 265px;
-  letter-spacing: 0.1px;
-  padding-bottom: 25px;
-}
-
-.video-wrapper {
-  position: relative;
-  .flex (wrap, center, column);
-  width: 100%;
-
-  &::after {
-    content: "";
-    cursor: pointer;
-    position: absolute;
-    background-image: url("../img/movi.svg");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    top: 236px;
-    left: 136px;
-    z-index: 3;
-    height: 54px;
-    width: 48px;
-  }
-
-  @media (max-width: @mobile-width-only) {
-    margin-bottom: -15px;
-  }
-}
-
-.video-image {
-  width: 280px;
-  height: 177px;
-  z-index: 1;
-  cursor: pointer;
-
-  &:hover {
-    opacity: 0.8;
-  }
-
-  &:focus {
-    outline: 1px solid #f2f2f2;
-  }
-
-  &:active {
-    outline: 1px solid #f2f2f2;
-    opacity: 0.8;
-  }
-}
-
 @media (min-width: @tablet-width) {
-  .gallery-wrapper {
+  .gallery {
     margin: 0;
     padding: 0;
     width: 768px;
+
+    .gallery-wrapper {
+      .flex (wrap, center, row);
+      width: 648px;
+    }
   }
 
   .gallery-title {
@@ -192,199 +53,27 @@
     font-size: 14px;
     line-height: 24px;
   }
-
-  .gallery-wrapper__item {
-    .flex (wrap, center, row);
-    width: 648px;
-  }
-
-  .gallery-item {
-    width: 324px;
-    padding: 0;
-    margin: 0;
-    border: none;
-
-    .gallery-image {
-      width: 324px;
-      height: 267px;
-    }
-
-    &:first-child {
-      width: 648px;
-
-      .gallery-image {
-        width: 648px;
-        height: 400px;
-      }
-    }
-
-    &:nth-child(odd) {
-      background-color: #ebebeb;
-    }
-
-    &:nth-child(even) {
-      background-color: #f2f2f2;
-    }
-  }
-
-  .gallery-description {
-    .flex (wrap, left, column);
-    padding-left: 20px;
-    padding-top: 22px;
-    padding-bottom: 15px;
-  }
-
-  .gallery-capition {
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  .gallery-counter {
-    align-items: center;
-    margin-left: auto;
-    padding-right: 20px;
-    padding-top: 28px;
-    width: auto;
-
-    .gallery-icon {
-      margin-right: 9px;
-    }
-  }
-
-  .gallery-number {
-    margin-left: auto;
-    padding-left: 8px;
-  }
-
-  .gallery-item:first-of-type .gallery-counter {
-    margin-left: auto;
-    padding-right: 20px;
-    padding-top: 28px;
-
-    .gallery-number {
-      margin-left: auto;
-      padding-left: 10px;
-    }
-
-    .gallery-icon {
-      display: block;
-      margin-left: auto;
-    }
-  }
-
-  .video-wrapper {
-    padding-top: 40px;
-    padding-bottom: 35px;
-
-    &::after {
-      top: 473px;
-      left: 360px;
-    }
-  }
-
-  .video-title {
-    font-size: 30px;
-    line-height: 26px;
-    margin: 0;
-  }
-
-  .video-slogan {
-    margin: 0;
-    width: 460px;
-    padding-top: 20px;
-    padding-bottom: 90px;
-  }
-
-  .video-image {
-    width: 648px;
-    height: 500px;
-  }
 }
 
 @media (min-width: @desktop-width) {
-  .gallery-wrapper {
+  .gallery {
     width: 1200px;
+
+    .gallery-wrapper {
+      .flex (wrap, center, row);
+    }
   }
 
-  .gallery-title {
+  .gallery__title {
     padding-top: 100px;
   }
 
-  .gallery-slogan {
+  .gallery__slogan {
     padding-bottom: 83px;
     width: 440px;
   }
 
-  .gallery-wrapper__item {
+  .gallery__wrapper {
     width: 100%;
-  }
-
-  .gallery-item {
-    position: relative;
-    width: 400px;
-    height: 267px;
-
-    .gallery-image {
-      width: 400px;
-      height: 267px;
-    }
-
-    &:first-child {
-      width: 100%;
-      height: 400px;
-
-      .gallery-image {
-        width: 1200px;
-        height: 400px;
-      }
-
-      .gallery-capition {
-        position: absolute;
-        bottom: 0;
-      }
-    }
-  }
-
-  .gallery-description {
-    padding-top: 20px;
-    padding-left: 22px;
-    width: 75%;
-
-    .gallery-copyright {
-      padding-top: 2px;
-    }
-  }
-
-  .gallery-capition {
-    position: absolute;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.3);
-    color: #ffffff;
-  }
-
-  .video-wrapper {
-    padding-top: 40px;
-    padding-bottom: 78px;
-
-    &::after {
-      top: 473px;
-      left: 575px;
-    }
-  }
-
-  .video-title {
-    margin: 0;
-  }
-
-  .video-slogan {
-    margin: 0;
-    width: 450px;
-    padding-bottom: 90px;
-  }
-
-  .video-image {
-    width: 800px;
-    height: 500px;
   }
 }
