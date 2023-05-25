@@ -1,0 +1,45 @@
+.gallery-counter {
+  .flex (wrap, center, row);
+  justify-content: flex-start;
+  font-weight: 700;
+  width: 70px;
+  font-family: "PT Sans", "Arial", sans-serif;
+}
+
+.gallery-counter__number {
+  display: block;
+  padding-top: 5px;
+  padding-left: 15px;
+}
+
+.gallery-counter__icon {
+  display: block;
+
+  @media (max-width: @mobile-width-only) {
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .gallery-counter {
+    align-items: center;
+    margin-left: auto;
+    padding-right: 20px;
+    padding-top: 28px;
+    width: auto;
+
+    .gallery-counter__icon {
+      margin-right: 9px;
+    }
+  }
+
+  .gallery-counter__number {
+    margin-left: auto;
+    padding-left: 4px;
+  }
+}
+

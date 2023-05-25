@@ -1,3 +1,8 @@
+// Viewports
+@tablet-width: 768px;
+@desktop-width: 1200px;
+@mobile-width-only: 767px;
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -10,14 +15,15 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-// Viewports
-@tablet-width: 768px;
-@desktop-width: 1200px;
-@mobile-width-only: 767px;
+
+.html {
+  height: 100%;
+}
 
 .main-container {
   .flex (wrap, center,column);
-  justify-content: center;
+  flex-grow: 1;
+  justify-content: flex-start;
   background-color: #ffffff;
 }
 
@@ -35,9 +41,18 @@
   width: 320px;
 }
 
+
+.br--mobile {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
   .main-nav {
     width: 768px;
+  }
+
+  .br--mobile {
+    display: block;
   }
 }
 
@@ -48,5 +63,15 @@
 
   .main-container {
     width: 1200px;
+  }
+}
+
+.br--tablet {
+  display: none;
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .br--tablet {
+    display: block;
   }
 }
