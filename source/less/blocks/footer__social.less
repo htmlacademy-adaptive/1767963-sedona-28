@@ -14,6 +14,10 @@
   padding-bottom: 30px;
 }
 
+.social__item:nth-child(n+4) {
+  margin-top: 10px;
+}
+
 .footer__copyright {
   padding-bottom: 33px;
 }
@@ -30,7 +34,7 @@
     transform: scale(1.05);
     transition: 0.5s;
 
-    & svg {
+    .social__icon {
       opacity: 0.7;
     }
   }
@@ -45,44 +49,27 @@
     background-color: #5496bd;
     transition: 0.5s;
 
-    & svg {
+    .social__icon {
       opacity: 0.3;
     }
   }
 }
 
 .social__link--vkontakte {
-  .social__icon--vkontakte {
+  .social__icon-vkontakte {
     margin-top: 17px;
   }
 }
 
 .social__link--telegram {
-  .social__icon--telegram {
+  .social__icon-telegram {
     margin-top: 15px;
   }
 }
 
 .social__link--youtube {
-  .social__icon--youtube {
+  .social__icon-youtube {
     margin-top: 17px;
-  }
-}
-
-.contacts__link {
-  &:hover {
-    outline: none;
-    color: #81b3d2;
-  }
-
-  &:focus {
-    outline: none;
-    color: #766357;
-  }
-
-  &:active {
-    outline: none;
-    color: #b3b3b3;
   }
 }
 
@@ -90,24 +77,11 @@
   .social__list {
     padding-top: 30px;
   }
-
-  .footer__copyright {
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
 }
 
 @media (min-width: @tablet-width) {
-  .footer__contacts {
-    padding: 13px 49px 47px 61px;
-  }
-
   .footer__social {
     padding: 0 46px 36px 64px;
-  }
-
-  .footer__copyright {
-    padding: 9px 53px 43px 62px;
   }
 
   .social__list {
@@ -116,16 +90,8 @@
 }
 
 @media (min-width: @desktop-width) {
-  .footer__contacts {
-    padding: 14px 120px 47px 120px;
-  }
-
   .footer__social {
     padding: 3px 120px 36px 145px;
-  }
-
-  .footer__copyright {
-    padding: 9px 113px 43px 140px;
   }
 
   .social__list {
