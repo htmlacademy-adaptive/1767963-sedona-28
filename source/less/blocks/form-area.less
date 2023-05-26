@@ -1,155 +1,238 @@
-.form-wrapper__area {
+.form-area__field {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 700;
+  background-color: #f2f2f2;
+  color: #000000;
+  border: none;
+  font-size: 18px;
+  line-height: 26px;
+  width: 280px;
+  padding: 16px;
+
+
+  &:hover {
+    background-color: #e5e5e5;
+    color: #000000;
+  }
+
+  &:focus {
+    background-color: #f2f2f2;
+    outline: 2px solid #e5e5e5;
+  }
+
+  &:active {
+    background-color: #ffffff;
+    color: #000000;
+    outline: 2px solid rgba(229, 229, 229, 1);
+  }
+
+  &:disabled {
+    background-color: #ffffff;
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+    text-align: start;
+  }
+}
+
+.form-area {
   .flex (wrap, center, column);
   justify-content: space-between;
 }
 
-.form-field {
-  &:hover {
-    background-color: rgba(229, 229, 229, 1);
-  }
-
-  &:focus {
-    outline: 1px solid rgba(129, 179, 210, 1);
-  }
-
-  &:active {
-    background-color: rgba(255, 255, 255, 1);
-    outline: 1px solid rgba(229, 229, 229, 1); //почему эктив не белый?
-  }
-
-  &:disabled {
-    background-color: rgba(229, 229, 229, 1);
-    color: rgba(255, 255, 255, 1);
-  }
+.form-area__name {
+  .flex (wrap, flex-start, column);
+  justify-content: space-between;
 }
 
-.form-label {
+.form-area__surname {
+  .flex (wrap, flex-start, column);
+  justify-content: space-between;
+}
+
+.form-area__patronymic {
+  .flex (wrap, flex-start, column);
+  justify-content: space-between;
+  padding-bottom: 39px;
+}
+
+.form-area--name .form-title {
+  padding-top: 24px;
+  padding-bottom: 20px;
+}
+
+.form-area__title {
+  .title;
+  display: block;
+  margin: 0 auto;
+}
+
+.form-area__label {
+  text-transform: uppercase;
   display: block;
   margin-left: 16px;
 }
 
+.form-area__phone {
+  .flex (wrap, flex-start, column);
+  justify-content: space-between;
+  position: relative;
+
+  .form-phone__icon {
+    margin-top: 20px;
+  }
+
+  .form-phone__icon-wrapper {
+    display: block;
+    position: absolute;
+    width: 58px;
+    height: 58px;
+    background-color: #e6e6e6;
+    right: 0;
+    top: 48px;
+
+    @media (max-width: @mobile-width-only) {
+      top: 21px;
+    }
+  }
+}
+
+.form-area__email {
+  .flex (wrap, flex-start, column);
+  justify-content: space-between;
+  position: relative;
+  padding-top: 15px;
+  padding-bottom: 34px;
+
+  .form-email__icon {
+    margin-top: 23px;
+  }
+
+  .form-area__label {
+    padding-top: 0;
+  }
+
+  .form-phone__icon-wrapper,
+  .form-email__icon-wrapper {
+    display: block;
+    position: absolute;
+    width: 58px;
+    height: 58px;
+    background-color: #e6e6e6;
+    right: 0;
+    top: 36px;
+
+    @media (max-width: @mobile-width-only) {
+      top: 36px;
+    }
+  }
+}
+
+.form-area--contact .form-area__title {
+  padding-top: 24px;
+  padding-bottom: 20px;
+}
+
+
+@media (min-width: @tablet-width) {
+  .form-area__label {
+    padding-top: 24px;
+  }
+
+  .form-area__title {
+    font-size: 21px;
+    padding-top: 20px;
+  }
+
+  .form-area {
+    padding-bottom: 25px;
+  }
+
+  .form-area__surname {
+    margin-top: -6px;
+  }
+
+  .form-area__patronymic {
+    margin-top: -9px;
+  }
+
+  .form-area__field {
+    width: 263px;
+  }
+
+  .form-area--name .form-area__title {
+    padding-top: 20px;
+    padding-bottom: 0;
+  }
+
+  .form-area--contact {
+    justify-content: flex-start;
+  }
+
+  .form-area--contact .form-area__title {
+    padding-top: 20px;
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-area__label {
+    padding-top: 17px;
+  }
+
+  .form-area__field {
+    width: 398px;
+  }
+
+  .form-area__name {
+    margin-top: 7px;
+  }
+
+  .form-area__surname {
+    margin-top: 0;
+  }
+
+  .form-area__patronymic {
+    margin-top: 0;
+  }
+
+  .form-area__phone .form-area__label {
+    padding-top: 27px;
+  }
+
+  .form-area__email .form-email__icon-wrapper {
+    top: 36px;
+  }
+}
+
 @media (max-width: @mobile-width-only) {
-  .form-slogan {
-    display: block;
-    padding-bottom: 28px;
-  }
-
-  .form__title {
-    display: block;
-    margin: 0 auto;
-    padding-top: 25px;
-    padding-bottom: 30px;
-  }
-
-  .form-title {
+  .form-area__title {
     display: block;
     padding: 0;
   }
 
-  .form-wrapper__area {
+  .form-area {
     border-bottom: 1px solid #e5e5e5;
     width: 100%;
     margin: 0 auto;
   }
 
-  .form-field {
+  .form-area__field {
     width: 247px;
   }
 
-  .form__group {
-    width: 100%;
-    border-bottom: 1px solid #e5e5e5;
-    margin: 0 auto;
-    padding-bottom: 10px;
+  .form-area--name {
+    border-top: 1px solid #e5e5e5;
+  }
+
+  .form-area__name {
+    padding-bottom: 16px;
+  }
+
+  .form-area__surname {
+    padding-bottom: 16px;
   }
 }
 
-.form__item {
-  display: flex;
-  padding-bottom: 35px;
-
-  &:last-child {
-    padding-bottom: 0;
-  }
-}
-
-.form__label {
-  align-items: center;
-  font-size: 18px;
-  line-height: 26px;
-  font-weight: 700;
-  padding-left: 42px;
-  padding-bottom: 18px;
-  padding-top: 18px;
-
-  &:last-child {
-    padding-bottom: 0;
-  }
-}
-
-.form__control {
-  position: relative;
-  display: block;
-  padding-left: 20px;
-
-  &:hover .form__mark {
-    background-color: rgba(229, 229, 229, 1);
-  }
-
-  &:active .form__mark {
-    background-color: rgba(213, 213, 213, 1);
-
-    &::before {
-      opacity: 0.3;
-    }
-
-    &::after {
-      opacity: 0.3;
-    }
-  }
-}
-
-.form__input:focus + .form__mark {
-  background-color: #f2f2f2;
-  outline: 1px solid #81b3b2;
-}
-
-.form__mark {
-  position: absolute;
-  width: 46px;
-  height: 46px;
-  background-color: #f2f2f2;
-  border-radius: 4px;
-  top: -8px;
-  left: 0;
-}
-
-.form__input[type="checkbox"]:checked + .form__mark::before,
-.form__input[type="checkbox"]:checked + .form__mark::after {
-  content: "";
-  position: absolute;
-  background-color: #333333;
-}
-
-.form__input[type="checkbox"]:checked + .form__mark::before {
-  transform: rotate(45deg);
-  top: 26px;
-  left: 12px;
-  width: 11px;
-  height: 4px;
-}
-
-.form__input[type="checkbox"]:checked + .form__mark::after {
-  transform: rotate(-45deg);
-  top: 22px;
-  left: 16px;
-  width: 22px;
-  height: 4px;
-}
-
-@media (min-width: @desktop-width) {
-  .form__group .form__title {
-    padding-top: 8px;
-    padding-bottom: 40px;
-  }
-}
