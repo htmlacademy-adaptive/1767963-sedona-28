@@ -2,13 +2,14 @@
   border: none;
   margin: 0;
   padding: 0 0 50px;
-
-  .form__title {
-    padding-bottom: 22px;
-  }
 }
 
-.form-field_comment {
+.form-comment__title {
+  .title;
+  padding-bottom: 22px;
+}
+
+.form-comment__field {
   height: 118px;
   display: inline-block;
   resize: none;
@@ -21,22 +22,24 @@
     white-space: pre-wrap;
     overflow-wrap: break-word;
   }
-}
 
-.form__legend--bottom {
-  font-size: 14px;
-  line-height: 21px;
-  color: rgba(51, 51, 51, 0.6);
-  margin-right: 19px;
-  margin-top: 2px;
-}
+  &:hover {
+    background-color: rgba(229, 229, 229, 1);
+  }
 
-.form-button {
-  font-family: "PT Sans", "Arial", sans-serif;
-  .button;
-  width: 88%;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  &:focus {
+    outline: 1px solid rgba(129, 179, 210, 1);
+  }
+
+  &:active {
+    background-color: rgba(255, 255, 255, 1);
+    outline: 1px solid rgba(229, 229, 229, 1);
+  }
+
+  &:disabled {
+    background-color: rgba(229, 229, 229, 1);
+    color: rgba(255, 255, 255, 1);
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -44,50 +47,54 @@
     grid-column: 1 / -1;
     .flex (wrap, center,column);
     justify-content: center;
-
-    .form__title {
-      margin-right: auto;
-      padding-bottom: 27px;
-    }
   }
 
-  .form-field_comment {
+  .form-comment__field {
     width: 616px;
     height: 118px;
     padding: 18px 16px 24px 16px;
   }
 
-  .form__legend--bottom {
-    font-size: 14px;
-    text-transform: uppercase;
-    align-self: center;
-    margin-top: 20px;
-    margin-right: -1px;
-  }
+  .form-comment__title {
+    display: block;
+    font-size: 21px;
+    line-height: 26px;
+    margin: 0;
+    padding-bottom: 28px;
+    position: relative;
+    width: 648px;
+    margin-right: auto;
 
-  .form-button {
-    width: 324px;
-    margin-top: -2px;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 123px;
+      height: 1px;
+      background-color: rgba(219, 219, 219, 1);
+      left: 0;
+      top: 10px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 123px;
+      height: 1px;
+      background-color: rgba(219, 219, 219, 1);
+      right: 0;
+      top: 10px;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
-  .form-field_comment {
+  .form-comment__field {
     width: 736px;
     height: 128px;
     padding: 16px;
   }
 
-  .form-button {
-    width: 384px;
-    margin-left: 96px;
-  }
-
-  .form__legend--bottom {
-    margin-right: 96px;
-  }
-
-  .form-comment .form__title {
+  .form-comment .form-comment__title {
     position: relative;
     width: 960px;
     padding-top: 36px;
@@ -111,5 +118,14 @@
       right: 0;
       top: 47px;
     }
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .form-comment__title {
+    display: block;
+    margin: 0 auto;
+    padding-top: 25px;
+    padding-bottom: 23px;
   }
 }
